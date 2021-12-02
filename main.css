@@ -2,4 +2,18 @@ body  {
   background-color: black;
   color: white;
   font-family: arial;
+  text-align: center;
+}
+
+.end_div {
+  padding: 50px;
+}
+.end_timer {
+  font-size: 100px;
+  margin-top: -25px;
+}
+
+#end_subtitle {
+  margin-top: -75px;
+  color: gray;
 }

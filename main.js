@@ -12,10 +12,14 @@ var myfunc = setInterval(function() {
   var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-  document.getElementById("end_days").innerHTML = days
-  document.getElementById("end_hours").innerHTML = hours
-  document.getElementById("end_minutes").innerHTML = minutes
-  document.getElementById("end_seconds").innerHTML = seconds
+  document.getElementById("end_days").innerHTML = days;
+  document.getElementById("end_hours").innerHTML = hours;
+  document.getElementById("end_minutes").innerHTML = minutes;
+  document.getElementById("end_seconds").innerHTML = seconds;
+
+  if (days <= 7) {
+    document.getElementById("end_span").style.color = "red";
+  }
 
   if (timeleft < 0) {
       clearInterval(myfunc);
