@@ -58,7 +58,7 @@ var myfunc = setInterval(function() {
   endTimer(countDownDate_end, current_time);
 
   // This is for Christmas break
-  var countDownDate_cbreak = new Date("Dec 3, 2021 15:00:00").getTime();
+  var countDownDate_cbreak = new Date("Dec 17, 2021 15:00:00").getTime();
   christmasbTimer(countDownDate_cbreak, current_time);
 
 
