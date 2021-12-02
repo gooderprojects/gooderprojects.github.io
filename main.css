@@ -13,6 +13,18 @@ body  {
   margin-top: -25px;
 }
 
+.cbreak_div {
+  padding: 50px;
+}
+
+.cbreak_timer {
+  color: green;
+}
+
+#cbreak_days, #cbreak_hours, #cbreak_minutes, #cbreak_seconds {
+  color: red;
+}
+
 #end_subtitle {
   margin-top: -75px;
   color: gray;
