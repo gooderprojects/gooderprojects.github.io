@@ -18,11 +18,23 @@ body  {
 }
 
 .cbreak_timer {
+  color: red;
+  font-size: 50px;
+  margin-top: -20px;
+}
+
+#cbreak_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
+#cbreak_hours, #cbreak_seconds {
   color: green;
 }
 
-#cbreak_days, #cbreak_hours, #cbreak_minutes, #cbreak_seconds {
-  color: red;
+#cbreak_days, #cbreak_minutes {
+  color: yellow;
 }
 
 #end_subtitle {
