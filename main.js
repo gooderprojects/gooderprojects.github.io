@@ -1,3 +1,7 @@
+function swichToCbreak() {
+  window.open("cbreak.html")
+}
+
 function endTimer(countDownDate, now) {
   var timeleft_end = countDownDate - now;
 
@@ -13,6 +17,7 @@ function endTimer(countDownDate, now) {
 
   if (days <= 7) {
     document.getElementById("end_span").style.color = "red";
+    document.getElementById("end_subtitle").style.color = "red";
   }
 
   if (timeleft_end < 0) {
@@ -40,11 +45,13 @@ function christmasbTimer(countDownDate, now) {
     document.getElementById("cbreak_hours").style.color = "red";
     document.getElementById("cbreak_minutes").style.color = "red";
     document.getElementById("cbreak_seconds").style.color = "red";
+    document.getElementById("cbreak_subtitle").style.color = "red";
   }
 
   if (timeleft_end < 0) {
       clearInterval(myfunc);
       console.log("End");
+      window.open("cbreak.html")
   }
 }
 
@@ -54,11 +61,11 @@ var myfunc = setInterval(function() {
   document.getElementById("current_date").innerHTML = new Date();
 
   // This is for the end of the school year
-  var countDownDate_end = new Date("May 31, 2022 15:00:00").getTime();
+  var countDownDate_end = new Date("May 26, 2022 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
   // This is for Christmas break
-  var countDownDate_cbreak = new Date("Dec 17, 2021 15:00:00").getTime();
+  var countDownDate_cbreak = new Date("Dec 20, 2021 15:00:01").getTime();
   christmasbTimer(countDownDate_cbreak, current_time);
 
 
