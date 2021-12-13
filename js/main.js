@@ -103,11 +103,13 @@ function springbTimer(countDownDate, now) {
   }
 }
 
+var delayVar = 0;
+
 // This is the main function
 var myfunc = setInterval(function() {
   // Gets the current time
   var current_time = new Date().getTime();
-  
+
   // This gets the actual date
   document.getElementById("current_date").innerHTML = new Date();
 
@@ -123,5 +125,9 @@ var myfunc = setInterval(function() {
   var countDownDate_sbreak = new Date("Apr 15, 2022 15:00:01").getTime();
   springbTimer(countDownDate_sbreak, current_time);
 
+  // This makes no delay at the beginning
+  if (delayVar == 0) {
+    delayVar = 1000;
+  }
 
-}, 1000)
+}, delayVar)
