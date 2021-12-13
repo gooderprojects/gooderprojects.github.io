@@ -33,6 +33,7 @@ function mainTimer(countDownDate, now) {
   }
 }
 
+var delayVar = 0;
 var myfunc = setInterval(function() {
   var current_time = new Date().getTime();
   // This gets the actual date
@@ -42,4 +43,9 @@ var myfunc = setInterval(function() {
   var countDownDate = new Date("Jan 2, 2022 00:00:00").getTime();
   mainTimer(countDownDate, current_time);
 
-}, 1000)
+  // This makes no delay at the beginning
+    if (delayVar == 0) {
+      delayVar = 1000;
+    }
+
+}, delayVar)
