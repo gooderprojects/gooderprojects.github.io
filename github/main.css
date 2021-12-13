@@ -5,15 +5,15 @@ body  {
   text-align: center;
 }
 
-.cbreak_div {
+.end_div {
   padding: 50px;
 }
-.cbreak_timer {
+.end_timer {
   font-size: 100px;
   margin-top: -25px;
 }
 
-.end_div {
+.cbreak_div {
   padding: 50px;
   float: left;
   padding-bottom: 0px;
@@ -25,27 +25,27 @@ body  {
   padding-bottom: 0px;
 }
 
-.end_timer {
-  color: white;
+.cbreak_timer {
+  color: red;
   font-size: 75px;
   margin-top: -20px;
 }
 
-#end_subtitle {
+#cbreak_subtitle {
   margin-top: -20px;
   color: gray;
   font-size: 15px;
 }
 
-#end_hours, #end_seconds {
-  color: white;
+#cbreak_hours, #cbreak_seconds {
+  color: green;
 }
 
-#end_days, #end_minutes {
-  color: white;
+#cbreak_days, #cbreak_minutes {
+  color: #ffd500;
 }
 
-#cbreak_subtitle {
+#end_subtitle {
   margin-top: -75px;
   color: gray;
 }
@@ -68,19 +68,4 @@ body  {
   color: green;
   font-size: 75px;
   margin-top: -20px;
-}
-
-#temp_style {
-  color: red;
-  font-size: 30px;
-}
-
-#temp_span_a {
-  color: silver;
-}
-#temp_span_b {
-  color: yellow;
-}
-#temp_span_c {
-  color: green;
 }
