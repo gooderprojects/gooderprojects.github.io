@@ -64,7 +64,7 @@ function christmasbTimer(countDownDate, now) {
   if (timeleft_end < 0) {
       clearInterval(myfunc);
       console.log("End");
-      window.open("cbreak.html")
+      window.open("cbreak.html", "_self")
   }
 }
 
