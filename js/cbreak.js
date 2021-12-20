@@ -1,6 +1,6 @@
 function returnToMain() {
   console.log("Returning to main...")
-  window.open('index.html');
+  window.open('index.html', '_self');
 }
 
 function mainTimer(countDownDate, now) {
