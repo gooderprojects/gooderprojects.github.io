@@ -40,7 +40,7 @@ var myfunc = setInterval(function() {
   document.getElementById("current_date").innerHTML = new Date();
 
   // This is for Christmas break
-  var countDownDate = new Date("Jan 2, 2022 00:00:00").getTime();
+  var countDownDate = new Date("Jan 3, 2022 00:00:00").getTime();
   mainTimer(countDownDate, current_time);
 
   // This makes no delay at the beginning
