@@ -107,6 +107,8 @@ var delayVar = 0;
 
 // This is the main function
 var myfunc = setInterval(function() {
+  // Gets the current date
+  var current_date = new Date();
   // Gets the current time
   var current_time = new Date().getTime();
 
@@ -118,7 +120,12 @@ var myfunc = setInterval(function() {
   endTimer(countDownDate_end, current_time);
 
   // This is for Christmas break
-  var countDownDate_cbreak = new Date("Dec 17, 2021 15:00:01").getTime();
+  if (current_date.getFullYear == "2021") {
+    var countDownDate_cbreak = new Date("Dec 17, 2021 15:00:01").getTime();
+  }
+  else if (current_date.getFullYear == "2022") {
+    var countDownDate_cbreak = new Date("Dec 17, 2022 15:00:01").getTime();
+  }
   christmasbTimer(countDownDate_cbreak, current_time);
 
   // This is for spring break
