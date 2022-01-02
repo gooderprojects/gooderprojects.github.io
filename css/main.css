@@ -36,13 +36,14 @@ body  {
   font-size: 15px;
 }
 
+#csw_days, #csw_hours, #csw_minutes, #csw_seconds {
+  color: pink;
+}
+
 #end_subtitle {
   margin-top: -75px;
   color: gray;
-}
-
-#csw_span {
-  color: pink;
+  font-size: 20px;
 }
 
 #sbreak_subtitle {

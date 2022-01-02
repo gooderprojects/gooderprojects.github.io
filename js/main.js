@@ -40,26 +40,26 @@ function cswTimer(countDownDate, now) {
   var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
 
   // Changes the numbers on the timer
-  document.getElementById("cbreak_days").innerHTML = days;
-  document.getElementById("cbreak_hours").innerHTML = hours;
-  document.getElementById("cbreak_minutes").innerHTML = minutes;
-  document.getElementById("cbreak_seconds").innerHTML = seconds;
+  document.getElementById("csw_days").innerHTML = days;
+  document.getElementById("csw_hours").innerHTML = hours;
+  document.getElementById("csw_minutes").innerHTML = minutes;
+  document.getElementById("csw_seconds").innerHTML = seconds;
 
   // It it is within 7 days, the timer turns red
   if (days <= 7) {
-    document.getElementById("cbreak_span").style.color = "red";
-    document.getElementById("cbreak_days").style.color = "red";
-    document.getElementById("cbreak_hours").style.color = "red";
-    document.getElementById("cbreak_minutes").style.color = "red";
-    document.getElementById("cbreak_seconds").style.color = "red";
-    document.getElementById("cbreak_subtitle").style.color = "red";
+    document.getElementById("csw_span").style.color = "red";
+    document.getElementById("csw_days").style.color = "red";
+    document.getElementById("csw_hours").style.color = "red";
+    document.getElementById("csw_minutes").style.color = "red";
+    document.getElementById("csw_seconds").style.color = "red";
+    document.getElementById("csw_subtitle").style.color = "red";
   }
 
   // Does something after the timer ends
   if (timeleft_end < 0) {
       clearInterval(myfunc);
       console.log("End");
-      window.open("cbreak.html", "_self")
+      window.open("csw.html", "_self")
   }
 }
 
@@ -94,7 +94,7 @@ function springbTimer(countDownDate, now) {
   if (timeleft_end < 0) {
       clearInterval(myfunc);
       console.log("End");
-      window.open("cbreak.html")
+      window.open("csw.html")
   }
 }
 
@@ -113,8 +113,8 @@ var myfunc = setInterval(function() {
   endTimer(countDownDate_end, current_time);
 
   // This is for Catholic Schools week
-  var countDownDate_cbreak = new Date("Feb 10, 2022 15:00:01").getTime();
-  christmasbTimer(countDownDate_cbreak, current_time);
+  var countDownDate_csw = new Date("Feb 10, 2022 15:00:01").getTime();
+  cswTimer(countDownDate_csw, current_time);
 
   // This is for spring break
   var countDownDate_sbreak = new Date("Apr 15, 2022 15:00:01").getTime();
