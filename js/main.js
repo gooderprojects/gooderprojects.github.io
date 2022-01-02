@@ -113,7 +113,7 @@ var myfunc = setInterval(function() {
   endTimer(countDownDate_end, current_time);
 
   // This is for Catholic Schools week
-  var countDownDate_csw = new Date("Feb 10, 2022 15:00:01").getTime();
+  var countDownDate_csw = new Date("Jan 30, 2022 15:00:01").getTime();
   cswTimer(countDownDate_csw, current_time);
 
   // This is for spring break
