@@ -1,8 +1,3 @@
-function swichToCbreak() {
-  // This opens the timer for the end of Christmas break
-  window.open("cbreak.html")
-}
-
 // This is the function for the end of school year timer
 function endTimer(countDownDate, now) {
   // Gets the time left until the end of the school year
@@ -34,7 +29,7 @@ function endTimer(countDownDate, now) {
 }
 
 // This is the function for the Christmas break timer
-function christmasbTimer(countDownDate, now) {
+function cswTimer(countDownDate, now) {
   // Gets time until the end of the school year
   var timeleft_end = countDownDate - now;
 
@@ -117,8 +112,8 @@ var myfunc = setInterval(function() {
   var countDownDate_end = new Date("May 26, 2022 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
-  // This is for Christmas break
-  var countDownDate_cbreak = new Date("Dec 17, 2021 15:00:01").getTime();
+  // This is for Catholic Schools week
+  var countDownDate_cbreak = new Date("Feb 10, 2022 15:00:01").getTime();
   christmasbTimer(countDownDate_cbreak, current_time);
 
   // This is for spring break

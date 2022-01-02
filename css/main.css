@@ -13,7 +13,7 @@ body  {
   margin-top: -25px;
 }
 
-.cbreak_div {
+.csw_div {
   padding: 50px;
   float: left;
   padding-bottom: 0px;
@@ -24,29 +24,25 @@ body  {
   padding-bottom: 0px;
 }
 
-.cbreak_timer {
-  color: red;
+.csw_timer {
+  color: white;
   font-size: 75px;
   margin-top: -20px;
 }
 
-#cbreak_subtitle {
+#csw_subtitle {
   margin-top: -20px;
   color: gray;
   font-size: 15px;
 }
 
-#cbreak_hours, #cbreak_seconds {
-  color: green;
-}
-
-#cbreak_days, #cbreak_minutes {
-  color: #ffd500;
-}
-
 #end_subtitle {
   margin-top: -75px;
   color: gray;
+}
+
+#csw_span {
+  color: pink;
 }
 
 #sbreak_subtitle {
