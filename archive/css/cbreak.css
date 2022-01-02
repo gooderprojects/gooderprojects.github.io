@@ -1,0 +1,34 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: arial;
+  text-align: center;
+}
+
+.header {
+  font-size: 80px;
+}
+
+.main_div {
+  font-size: 15px;
+}
+
+#current_date {
+  color: gray;
+}
+
+#syi {
+  margin-left: -200px;
+}
+
+#subtitle {
+  color: gray;
+  font-size: 12px;
+  font-weight: bolder;
+  margin-top: -20px;
+}
+
+#current_date_div {
+  padding-top: 50px;
+  font-size: 10px;
+}

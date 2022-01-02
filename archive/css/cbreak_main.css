@@ -1,0 +1,86 @@
+body  {
+  background-color: black;
+  color: white;
+  font-family: arial;
+  text-align: center;
+}
+
+.cbreak_div {
+  padding: 50px;
+}
+.cbreak_timer {
+  font-size: 100px;
+  margin-top: -25px;
+}
+
+.end_div {
+  padding: 50px;
+  float: left;
+  padding-bottom: 0px;
+}
+
+.sbreak_div {
+  padding: 50px;
+  float: right;
+  padding-bottom: 0px;
+}
+
+.end_timer {
+  color: white;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#end_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
+#end_hours, #end_seconds {
+  color: white;
+}
+
+#end_days, #end_minutes {
+  color: white;
+}
+
+#cbreak_subtitle {
+  margin-top: -75px;
+  color: gray;
+}
+
+#sbreak_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
+#sbreak_hours, #sbreak_seconds {
+  color: lime;
+}
+
+#sbreak_days, #sbreak_minutes {
+  color: yellow;
+}
+
+.sbreak_timer {
+  color: green;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#temp_style {
+  color: red;
+  font-size: 30px;
+}
+
+#temp_span_a {
+  color: silver;
+}
+#temp_span_b {
+  color: yellow;
+}
+#temp_span_c {
+  color: green;
+}
