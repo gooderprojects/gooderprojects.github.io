@@ -1,2 +1,2 @@
 # Security Policy
-Security is for nerds. Do wtf you want.
+Security is for nerds. Do what you want.
