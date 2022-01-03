@@ -9,7 +9,7 @@ body  {
   padding: 50px;
 }
 .end_timer {
-  font-size: 100px;
+  font-size: 125px;
   margin-top: -25px;
 }
 
@@ -43,7 +43,7 @@ body  {
 #end_subtitle {
   margin-top: -75px;
   color: gray;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #sbreak_subtitle {
