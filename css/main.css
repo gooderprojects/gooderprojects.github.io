@@ -31,7 +31,6 @@ body  {
 .csw_div {
   padding: 50px;
   float: left;
-  padding-bottom: 0px;
 }
 
 .csw_timer {
@@ -56,7 +55,6 @@ body  {
 .sbreak_div {
   padding: 50px;
   float: right;
-  padding-bottom: 0px;
 }
 
 .sbreak_timer {
@@ -77,4 +75,44 @@ body  {
 
 #sbreak_days, #sbreak_minutes {
   color: yellow;
+}
+
+
+/* Trimester timer */
+
+.tri_div {
+  padding: 50px;
+  float: right;
+}
+
+.tri_timer {
+  color: white;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#tri_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
+
+/* Timer for Confrences */
+
+.con_div {
+  padding: 50px;
+  float: left;
+}
+
+.con_timer {
+  color: white;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#con_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
 }
