@@ -47,6 +47,7 @@ function cswTimer(countDownDate, now) {
 
   // It it is within 7 days, the timer turns red
   if (days <= 7) {
+    document.getElementById("csw_header").style.color = "red";
     document.getElementById("csw_span").style.color = "red";
     document.getElementById("csw_days").style.color = "red";
     document.getElementById("csw_hours").style.color = "red";
