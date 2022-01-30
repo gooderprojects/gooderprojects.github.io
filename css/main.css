@@ -26,35 +26,11 @@ body  {
 }
 
 
-/* Catholic Schools' Week Timer */
-
-.csw_div {
-  padding: 50px;
-  float: left;
-}
-
-.csw_timer {
-  color: white;
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#csw_subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-#csw_days, #csw_hours, #csw_minutes, #csw_seconds {
-  color: pink;
-}
-
-
 /* Spring Break Timer */
 
 .sbreak_div {
   padding: 50px;
-  float: right;
+  float: left;
 }
 
 .sbreak_timer {
