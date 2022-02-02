@@ -25,11 +25,12 @@ body  {
   font-size: 25px;
 }
 
+
 /* Spring Break Timer */
 
 .sbreak_div {
   padding: 50px;
-  float: right;
+  float: left;
 }
 
 .sbreak_timer {
