@@ -93,35 +93,6 @@ function triTimer(countDownDate, now) {
   }
 }
 
-// This is the function for the timer for Confrences
-function conTimer(countDownDate, now) {
-  // Gets the time left until Confrences
-  var timeleft_end = countDownDate - now;
-
-  // Does some calculating stuff
-  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
-
-  // Changes the numbers on the timer
-  document.getElementById("con_days").innerHTML = days;
-  document.getElementById("con_hours").innerHTML = hours;
-  document.getElementById("con_minutes").innerHTML = minutes;
-  document.getElementById("con_seconds").innerHTML = seconds;
-
-  // It it is within 7 days, the timer turns red
-  if (days <= 7) {
-    document.getElementById("con_span").style.color = "red";
-    document.getElementById("con_subtitle").style.color = "red";
-  }
-
-  // Does something after the timer ends
-  if (timeleft_end < 0) {
-      clearInterval(myfunc);
-      console.log("End");
-  }
-}
 
 var delayVar = 0;
 
@@ -144,10 +115,6 @@ var myfunc = setInterval(function() {
   // This is for the end of the trimester
   var countDownDate_tri = new Date("Feb 24, 2022 00:00:01").getTime();
   triTimer(countDownDate_tri, current_time);
-
-  // This is for confrences
-  var countDownDate_con = new Date("Feb 10, 2022 15:30:01").getTime();
-  conTimer(countDownDate_con, current_time);
 
   // This makes no delay at the beginning
   if (delayVar == 0) {
