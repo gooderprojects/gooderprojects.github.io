@@ -1,0 +1,74 @@
+/* CSS for index.html */
+
+body  {
+  background-color: black;
+  color: white;
+  font-family: arial;
+  text-align: center;
+}
+
+
+/* End timer */
+
+.end_div {
+  padding: 50px;
+}
+
+.end_timer {
+  font-size: 125px;
+  margin-top: -25px;
+}
+
+#end_subtitle {
+  margin-top: -75px;
+  color: gray;
+  font-size: 25px;
+}
+
+
+/* Spring Break Timer */
+
+.sbreak_div {
+  padding: 50px;
+  float: left;
+}
+
+.sbreak_timer {
+  color: green;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#sbreak_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
+#sbreak_hours, #sbreak_seconds {
+  color: lime;
+}
+
+#sbreak_days, #sbreak_minutes {
+  color: yellow;
+}
+
+
+/* Trimester timer */
+
+.tri_div {
+  padding: 50px;
+  float: right;
+}
+
+.tri_timer {
+  color: white;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#tri_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
