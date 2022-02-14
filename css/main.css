@@ -29,8 +29,7 @@ body  {
 /* Spring Break Timer */
 
 .sbreak_div {
-  padding: 50px;
-  float: left;
+  padding-top: 0px;
 }
 
 .sbreak_timer {
@@ -51,24 +50,4 @@ body  {
 
 #sbreak_days, #sbreak_minutes {
   color: yellow;
-}
-
-
-/* Trimester timer */
-
-.tri_div {
-  padding: 50px;
-  float: right;
-}
-
-.tri_timer {
-  color: white;
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#tri_subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
 }

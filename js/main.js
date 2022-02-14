@@ -63,37 +63,6 @@ function springbTimer(countDownDate, now) {
   }
 }
 
-// This is the function for the end of the trimester
-function triTimer(countDownDate, now) {
-  // Gets the time left until the end of the trimestri
-  var timeleft_end = countDownDate - now;
-
-  // Does some calculating stuff
-  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
-
-  // Changes the numbers on the timer
-  document.getElementById("tri_days").innerHTML = days;
-  document.getElementById("tri_hours").innerHTML = hours;
-  document.getElementById("tri_minutes").innerHTML = minutes;
-  document.getElementById("tri_seconds").innerHTML = seconds;
-
-  // It it is within 7 days, the timer turns red
-  if (days <= 7) {
-    document.getElementById("tri_span").style.color = "red";
-    document.getElementById("tri_subtitle").style.color = "red";
-  }
-
-  // Does something after the timer ends
-  if (timeleft_end < 0) {
-      clearInterval(myfunc);
-      console.log("End");
-  }
-}
-
-
 var delayVar = 0;
 
 // This is the main function
@@ -111,10 +80,6 @@ var myfunc = setInterval(function() {
   // This is for spring break
   var countDownDate_sbreak = new Date("Apr 15, 2022 15:00:01").getTime();
   springbTimer(countDownDate_sbreak, current_time);
-
-  // This is for the end of the trimester
-  var countDownDate_tri = new Date("Feb 24, 2022 00:00:01").getTime();
-  triTimer(countDownDate_tri, current_time);
 
   // This makes no delay at the beginning
   if (delayVar == 0) {
