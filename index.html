@@ -2,29 +2,20 @@
 
 <html lang="en">
   <head>
-    <!-- links for stylesheets and scripts -->
-    <title>School Timers</title>
-    <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <title>It's Spring Break!</title>
+    <link rel="stylesheet" href="css/sbreak.css">
+    <script src="js/sbreak.js"></script>
   </head>
   <body>
-    <!-- This is the header at the top of the page with the current date and time -->
-    <h2>Current date/time:</h2>
-    <h1 id="current_date">-:-:-:-</h1>
-    <!-- This is the timer for the end of the school year -->
-    <div class="end_div">
-      <h2>Time Remaining Until the End of the School Year:</h2>
-      <h1 class="end_timer"><span id="end_span"><span id="end_days">-</span>:<span id="end_hours">-</span>:<span id="end_minutes">-</span>:<span id="end_seconds">-</span></span></h1>
-      <h3 id="end_subtitle">Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds</h3>
+    <h1 class="header"><span id="sec1">It's</span><span id="sec2"> Spring</span><span id="sec3"> Break!</span></h1>
+    <div id="main_div" class="main_div">
+      <h2 id="syi">See you in</h2>
+      <h1 class="timer"><span id="main_span"><span id="days">-</span>:<span id="hours">-</span>:<span id="minutes">-</span>:<span id="seconds">-</span></span></h1>
+      <h3 id="subtitle">Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds</h3>
     </div>
-    <!-- This is the timer for spring break -->
-    <center>
-      <div class="sbreak_div">
-        <h2>Time Remaining Until Spring Break:</h2>
-        <h1 class="sbreak_timer"><span id="sbreak_span"><span id="sbreak_days">-</span>:<span id="sbreak_hours">-</span>:<span id="sbreak_minutes">-</span>:<span id="sbreak_seconds">-</span></span></h1>
-        <h3 id="sbreak_subtitle">Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds</h3>
-      </div>
-    </center>
-    <!-- This is the bottom of the page -->
+    <div id="current_date_div">
+      <h2>(Current date:)</h2>
+      <h1 id="current_date">-:-:-:-</h1>
+    </div>
   </body>
 </html>
