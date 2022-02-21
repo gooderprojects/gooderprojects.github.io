@@ -113,7 +113,7 @@ var myfunc = setInterval(function() {
   springbTimer(countDownDate_sbreak, current_time);
 
   // This is for the end of the trimester
-  var countDownDate_tri = new Date("Feb 24, 2022 00:00:01").getTime();
+  var countDownDate_tri = new Date("Feb 25, 2022 00:00:01").getTime();
   triTimer(countDownDate_tri, current_time);
 
   // This makes no delay at the beginning
