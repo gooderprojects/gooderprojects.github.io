@@ -7,8 +7,8 @@ body  {
   text-align: center;
 }
 
-a {
-  color: #db49ff;
+a, #new-timers-span {
+  color: #fc37ff;
 }
 
 
