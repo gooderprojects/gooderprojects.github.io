@@ -99,7 +99,7 @@ var myfunc = setInterval(function() {
   var countDownDate_sbreak = new Date("Apr 15, 2022 15:00:01").getTime();
   springbTimer(countDownDate_sbreak, current_time);
 
-  var countDownDate_tri = new Date("Feb 25, 2022 00:00:01").getTime();
+  var countDownDate_tri = new Date("Feb 24, 2022 15:00:01").getTime();
   triTimer(countDownDate_tri, current_time);
 
   // No delay on open
