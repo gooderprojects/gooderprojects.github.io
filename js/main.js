@@ -58,31 +58,6 @@ function springbTimer(countDownDate, now) {
   }
 }
 
-function triTimer(countDownDate, now) {
-  var timeleft_end = countDownDate - now;
-
-  // Calculates time until countDownDate
-  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
-
-  document.getElementById("tri_days").innerHTML = days;
-  document.getElementById("tri_hours").innerHTML = hours;
-  document.getElementById("tri_minutes").innerHTML = minutes;
-  document.getElementById("tri_seconds").innerHTML = seconds;
-
-  if (days <= 7) {
-    document.getElementById("tri_span").style.color = "red";
-    document.getElementById("tri_subtitle").style.color = "red";
-  }
-
-  if (timeleft_end < 0) {
-      clearInterval(myfunc);
-      console.log("End");
-  }
-}
-
 
 var delayVar = 0;
 
@@ -98,10 +73,7 @@ var myfunc = setInterval(function() {
 
   var countDownDate_sbreak = new Date("Apr 15, 2022 15:00:01").getTime();
   springbTimer(countDownDate_sbreak, current_time);
-
-  var countDownDate_tri = new Date("Feb 24, 2022 15:00:01").getTime();
-  triTimer(countDownDate_tri, current_time);
-
+  
   // No delay on open
   if (delayVar == 0) {
     delayVar = 1000;
