@@ -30,10 +30,32 @@ a, #new-timers-span {
 }
 
 
+/* School Day Timer */
+
+.sday_div {
+  padding-top: 0px;
+  float: left;
+  padding-left: 20px;
+}
+
+.sday_timer {
+  color: white;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#sday_subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
 /* Spring Break Timer */
 
 .sbreak_div {
   padding-top: 0px;
+  float: right;
+  padding-right: 20px;
 }
 
 .sbreak_timer {
