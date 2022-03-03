@@ -6,11 +6,22 @@
 
 function sdayTimer(countDownDate, now, school_time) {
   var date_var = new Date()
+  var date_hours = date_var.getHours();
   var timeleft_end = countDownDate - now;
 
   var timer_header = document.getElementById("sday-title");
-  if (school_time) {
-    timer_header.innerHTML = "Time Remaining Until School Tomorrow:";
+  if (school_time == false) {
+    if (date_hours >= 0) {
+      if (date_hours < 8) {
+        timer_header.innerHTML = "Time Remaining Until School Today:";
+      }
+      else {
+        timer_header.innerHTML = "Time Remaining Until School Tomorrow:";
+      }
+    }
+    else {
+      timer_header.innerHTML = "Time Remaining Until School Tomorrow:";
+    }
   }
   else {
     timer_header.innerHTML = "Time Remaining Until the End of the School Day:";
