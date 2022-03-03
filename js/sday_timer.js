@@ -10,10 +10,10 @@ function sdayTimer(countDownDate, now, school_time) {
 
   var timer_header = document.getElementById("sday-title");
   if (school_time) {
-    timer_header.innerHTML = "Time Remaining Until the End of the School Day:";
+    timer_header.innerHTML = "Time Remaining Until School Tomorrow:";
   }
   else {
-    timer_header.innerHTML = "Time Remaining Until School Tomorrow:";
+    timer_header.innerHTML = "Time Remaining Until the End of the School Day:";
   }
 
   // Calculates time until countDownDate
