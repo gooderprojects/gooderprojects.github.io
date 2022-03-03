@@ -52,7 +52,7 @@ function springbTimer(countDownDate, now) {
     document.getElementById("sbreak-subtitle").style.color = "red";
   }
 
-  if (timeleft_end < 0) {
+  if (timeleft_sbreak < 0) {
       clearInterval(myfunc);
       console.log("End");
   }
