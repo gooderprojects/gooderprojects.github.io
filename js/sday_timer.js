@@ -73,7 +73,7 @@ var myfunc = setInterval(function() {
     countDownDate = new Date((date_var.getMonth()+1)+"/"+day_var+"/"+date_var.getFullYear()+" 8:00:01").getTime();
   }
 
-  sdayTimer(countDownDate, current_time);
+  sdayTimer(countDownDate, current_time, schoolTime());
 
   // No delay on open
   if (delayVar == 0) {
