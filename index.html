@@ -3,7 +3,6 @@
   <head>
     <!-- links for stylesheets and scripts -->
     <title>School Timers</title>
-    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -18,7 +17,7 @@
     </div>
     <!-- This is the timer for the end of the school day  -->
     <div class="sday_div">
-      <h2>Time Remaining Until the End of the School Day:</h2>
+      <h2 id="sday_title">Time Remaining Until the End of the School Day:</h2>
       <h1 class="sday_timer"><span id="sday_span"><span id="sday_days">-</span>:<span id="sday_hours">-</span>:<span id="sday_minutes">-</span>:<span id="sday_seconds">-</span></span></h1>
       <h3 id="sday_subtitle">Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds</h3>
     </div>
@@ -35,6 +34,10 @@
         <h3> - This is an open-source project. The code can be found <a href="https://github.com/gooderprojects/gooderprojects.github.io/">here</a>.</h3>
       </div>
     </div>
+    <!-- scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/sday_timer.js"></script>
+
     <!-- This is the bottom of the page -->
   </body>
 </html>
