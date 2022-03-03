@@ -4,13 +4,11 @@
  * That's pretty much it
 */
 
-var school_on = false;
-
 function sdayTimer(countDownDate, now, school_time) {
   var date_var = new Date()
   var timeleft_end = countDownDate - now;
 
-  var timer_header = document.getElementById("sday_title");
+  var timer_header = document.getElementById("sday-title");
   if (school_time) {
     timer_header.innerHTML = "Time Remaining Until the End of the School Day:";
   }
@@ -24,10 +22,10 @@ function sdayTimer(countDownDate, now, school_time) {
   var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
 
-  document.getElementById("sday_days").innerHTML = days;
-  document.getElementById("sday_hours").innerHTML = hours;
-  document.getElementById("sday_minutes").innerHTML = minutes;
-  document.getElementById("sday_seconds").innerHTML = seconds;
+  document.getElementById("sday-days").innerHTML = days;
+  document.getElementById("sday-hours").innerHTML = hours;
+  document.getElementById("sday-minutes").innerHTML = minutes;
+  document.getElementById("sday-seconds").innerHTML = seconds;
 }
 
 function schoolTime() {
@@ -69,13 +67,13 @@ var myfunc = setInterval(function() {
 
   // Runs timer
   if (schoolTime()) {
-    countDownDate_sday = new Date((date_var.getMonth()+1)+"/"+day_var+"/"+date_var.getFullYear()+" 15:00:01").getTime();
+    countDownDate = new Date((date_var.getMonth()+1)+"/"+day_var+"/"+date_var.getFullYear()+" 15:00:01").getTime();
   }
   else {
-    countDownDate_sday = new Date((date_var.getMonth()+1)+"/"+day_var+"/"+date_var.getFullYear()+" 8:00:01").getTime();
+    countDownDate = new Date((date_var.getMonth()+1)+"/"+day_var+"/"+date_var.getFullYear()+" 8:00:01").getTime();
   }
 
-  sdayTimer(countDownDate_sday, current_time);
+  sdayTimer(countDownDate, current_time);
 
   // No delay on open
   if (delayVar == 0) {

@@ -13,14 +13,14 @@ function endTimer(countDownDate, now) {
   var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
 
-  document.getElementById("end_days").innerHTML = days;
-  document.getElementById("end_hours").innerHTML = hours;
-  document.getElementById("end_minutes").innerHTML = minutes;
-  document.getElementById("end_seconds").innerHTML = seconds;
+  document.getElementById("end-days").innerHTML = days;
+  document.getElementById("end-hours").innerHTML = hours;
+  document.getElementById("end-minutes").innerHTML = minutes;
+  document.getElementById("end-seconds").innerHTML = seconds;
 
   if (days <= 7) {
-    document.getElementById("end_span").style.color = "red";
-    document.getElementById("end_subtitle").style.color = "red";
+    document.getElementById("end-span").style.color = "red";
+    document.getElementById("end-subtitle").style.color = "red";
   }
 
   if (timeleft_end < 0) {
@@ -30,26 +30,26 @@ function endTimer(countDownDate, now) {
 }
 
 function springbTimer(countDownDate, now) {
-  var timeleft_end = countDownDate - now;
+  var timeleft_sbreak = countDownDate - now;
 
   // Calculates time until countDownDate
-  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
+  var days = Math.floor(timeleft_sbreak / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_sbreak % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_sbreak % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_sbreak % (1000 * 60)) / 1000);
 
-  document.getElementById("sbreak_days").innerHTML = days;
-  document.getElementById("sbreak_hours").innerHTML = hours;
-  document.getElementById("sbreak_minutes").innerHTML = minutes;
-  document.getElementById("sbreak_seconds").innerHTML = seconds;
+  document.getElementById("sbreak-days").innerHTML = days;
+  document.getElementById("sbreak-hours").innerHTML = hours;
+  document.getElementById("sbreak-minutes").innerHTML = minutes;
+  document.getElementById("sbreak-seconds").innerHTML = seconds;
 
   if (days <= 7) {
-    document.getElementById("sbreak_span").style.color = "red";
-    document.getElementById("sbreak_days").style.color = "red";
-    document.getElementById("sbreak_hours").style.color = "red";
-    document.getElementById("sbreak_minutes").style.color = "red";
-    document.getElementById("sbreak_seconds").style.color = "red";
-    document.getElementById("sbreak_subtitle").style.color = "red";
+    document.getElementById("sbreak-span").style.color = "red";
+    document.getElementById("sbreak-days").style.color = "red";
+    document.getElementById("sbreak-hours").style.color = "red";
+    document.getElementById("sbreak-minutes").style.color = "red";
+    document.getElementById("sbreak-seconds").style.color = "red";
+    document.getElementById("sbreak-subtitle").style.color = "red";
   }
 
   if (timeleft_end < 0) {
@@ -65,7 +65,7 @@ var delayVar = 0;
 var myfunc = setInterval(function() {
   var current_time = new Date().getTime();
 
-  document.getElementById("current_date").innerHTML = new Date();
+  document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
   var countDownDate_end = new Date("May 26, 2022 15:00:01").getTime();
@@ -73,7 +73,7 @@ var myfunc = setInterval(function() {
 
   var countDownDate_sbreak = new Date("Apr 15, 2022 15:00:01").getTime();
   springbTimer(countDownDate_sbreak, current_time);
-  
+
   // No delay on open
   if (delayVar == 0) {
     delayVar = 1000;

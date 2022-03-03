@@ -1,5 +1,3 @@
-/* CSS for index.html */
-
 body  {
   background-color: black;
   color: white;
@@ -12,73 +10,67 @@ a, #new-timers-span {
 }
 
 
-/* End timer */
-
-.end_div {
+.end-div {
   padding: 50px;
 }
 
-.end_timer {
+.end-timer {
   font-size: 125px;
   margin-top: -25px;
 }
 
-#end_subtitle {
+#end-subtitle {
   margin-top: -75px;
   color: gray;
   font-size: 25px;
 }
 
 
-/* School Day Timer */
-
-.sday_div {
+.sday-div {
   padding-top: 0px;
   float: left;
   padding-left: 40px;
 }
 
-.sday_timer {
+.sday-timer {
   color: white;
   font-size: 75px;
   margin-top: -20px;
 }
 
-#sday_subtitle {
+#sday-subtitle {
   margin-top: -20px;
   color: gray;
   font-size: 15px;
 }
 
-/* Spring Break Timer */
 
-.sbreak_div {
+.sbreak-div {
   padding-top: 0px;
   float: right;
   padding-right: 40px;
 }
 
-.sbreak_timer {
+.sbreak-timer {
   color: green;
   font-size: 75px;
   margin-top: -20px;
 }
 
-#sbreak_subtitle {
+#sbreak-subtitle {
   margin-top: -20px;
   color: gray;
   font-size: 15px;
 }
 
-#sbreak_hours, #sbreak_seconds {
+#sbreak-hours, #sbreak-seconds {
   color: lime;
 }
 
-#sbreak_days, #sbreak_minutes {
+#sbreak-days, #sbreak-minutes {
   color: yellow;
 }
 
-/* links */
 
 #links {
   z-index: -10;
