@@ -1,5 +1,5 @@
 /**
- * This code was written my me (github.com/Zbomb2000)
+ * This code was written my me (https://github.com/Zbomb2000)
  * I don't really care what you do with it
  * That's pretty much it
 */
