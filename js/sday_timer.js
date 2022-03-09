@@ -39,6 +39,7 @@ function sdayTimer(countDownDate, now, school_time) {
     }
   } else {
     timer_header.innerHTML = "Time Remaining Until the End of the School Day:";
+    var day_html = true;
   }
 
   // Calculates time until countDownDate
@@ -47,7 +48,12 @@ function sdayTimer(countDownDate, now, school_time) {
   var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
 
-  document.getElementById("sday-days").innerHTML = days;
+  if (day_html) {
+    document.getElementById("sday-days").innerHTML = "0";
+  }
+  else {
+    document.getElementById("sday-days").innerHTML = days;
+  }
   document.getElementById("sday-hours").innerHTML = hours;
   document.getElementById("sday-minutes").innerHTML = minutes;
   document.getElementById("sday-seconds").innerHTML = seconds;
