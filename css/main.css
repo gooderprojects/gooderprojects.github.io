@@ -9,38 +9,39 @@ a, #new-timers-span {
   color: #fc37ff;
 }
 
-
-.end-div {
-  padding: 50px;
+#title {
+  font-size: 100px;
+  margin-top: -50px;
 }
 
-.end-timer {
-  font-size: 125px;
-  margin-top: -25px;
-}
-
-#end-subtitle {
-  margin-top: -75px;
+#current-date, #current-date-title {
   color: gray;
   font-size: 25px;
 }
 
 
-.sday-div {
-  padding-top: 0px;
-  padding-left: 40px;
+.main-div {
+  padding: 50px;
 }
 
-.sday-timer {
-  color: white;
+.main-timer {
+  color: green;
   font-size: 75px;
-  margin-top: -20px;
+  margin-top: -25px;
 }
 
-#sday-subtitle {
-  margin-top: -20px;
+#main-subtitle {
+  margin-top: -50px;
   color: gray;
   font-size: 15px;
+}
+
+#main-days, #main-minutes {
+  color: yellow;
+}
+
+#main-hours, #main-seconds {
+  color: lime;
 }
 
 

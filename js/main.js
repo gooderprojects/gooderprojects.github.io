@@ -4,28 +4,28 @@
  * That's pretty much it
 */
 
-function endTimer(countDownDate, now) {
-  var timeleft_end = countDownDate - now;
+function mainTimer(countDownDate, now) {
+  var timeleft_main = countDownDate - now;
 
   // Calculates time until countDownDate
-  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
+  var days = Math.floor(timeleft_main / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_main % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_main % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_main % (1000 * 60)) / 1000);
 
-  document.getElementById("end-days").innerHTML = days;
-  document.getElementById("end-hours").innerHTML = hours;
-  document.getElementById("end-minutes").innerHTML = minutes;
-  document.getElementById("end-seconds").innerHTML = seconds;
+  document.getElementById("main-days").innerHTML = days;
+  document.getElementById("main-hours").innerHTML = hours;
+  document.getElementById("main-minutes").innerHTML = minutes;
+  document.getElementById("main-seconds").innerHTML = seconds;
 
   if (days <= 7) {
-    document.getElementById("end-span").style.color = "red";
-    document.getElementById("end-subtitle").style.color = "red";
+    document.getElementById("main-span").style.color = "red";
+    document.getElementById("main-subtitle").style.color = "red";
   }
 
-  if (timeleft_end < 0) {
+  if (timeleft_main < 0) {
       clearInterval(myfunc);
-      console.log("End");
+      console.log("main");
   }
 }
 
@@ -39,8 +39,8 @@ var myfunc = setInterval(function() {
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_end = new Date("May 26, 2022 15:00:01").getTime();
-  endTimer(countDownDate_end, current_time);
+  var countDownDate_main = new Date("Apr 25, 2022 00:00:01").getTime();
+  mainTimer(countDownDate_main, current_time);
 
   // No delay on open
   if (delayVar == 0) {
