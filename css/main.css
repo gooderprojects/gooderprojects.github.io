@@ -28,7 +28,6 @@ a, #new-timers-span {
 
 .sday-div {
   padding-top: 0px;
-  float: left;
   padding-left: 40px;
 }
 
@@ -42,33 +41,6 @@ a, #new-timers-span {
   margin-top: -20px;
   color: gray;
   font-size: 15px;
-}
-
-
-.sbreak-div {
-  padding-top: 0px;
-  float: right;
-  padding-right: 40px;
-}
-
-.sbreak-timer {
-  color: green;
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#sbreak-subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-#sbreak-hours, #sbreak-seconds {
-  color: lime;
-}
-
-#sbreak-days, #sbreak-minutes {
-  color: yellow;
 }
 
 
