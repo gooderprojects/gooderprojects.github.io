@@ -25,31 +25,26 @@ function weekendTimer(countDownDate, now) {
 
   if (timeleft_weekend < 0) {
       clearInterval(myfunc);
-      console.log("weekend");
+      console.log("End");
   }
 }
 
-function getNextWeekend(date) {
-  const dateCopy = new Date(date.getTime());
-
-  const nextFriday = new Date(
-    dateCopy.setDate(
-      dateCopy.getDate() + ((7 - dateCopy.getDay() + 5) % 7 || 7),
-    ),
-  );
-  return nextFriday;
+function fartFriday() {
+  const current_date = new Date();
+  var resultDate = new Date(current_date.getTime());
+  resultDate.setDate(current_date.getDate() + (7 + 5 - current_date.getDay()) % 7, "00:00:00");
+  resultDate.setHours(15, 0, 0, 1);
+  return resultDate;
 }
 
 var delayVar = 0;
 
 // Main loop
 var myfunc = setInterval(function() {
-  current_date = new Date();
-  document.getElementById("current-date").innerHTML = new Date();
+  const current_date = new Date();
+  const current_time = current_date.getTime();
 
-  // Runs all timers
-  var countDownDate_weekend = getNextWeekend(current_date);
-  weekendTimer(countDownDate_weekend.getTime(), current_date.getTime());
+  weekendTimer(fartFriday(), current_time);
 
   // No delay on open
   if (delayVar == 0) {
