@@ -10,8 +10,13 @@ a, #new-timers-span {
 }
 
 
+#top-header {
+  color: #474747;
+}
+
 .end-div {
   padding: 50px;
+  padding-top: 15px;
 }
 
 .end-timer {
@@ -28,6 +33,7 @@ a, #new-timers-span {
 
 .sday-div {
   padding-top: 0px;
+  float: left;
   padding-left: 40px;
 }
 
@@ -44,12 +50,31 @@ a, #new-timers-span {
 }
 
 
+.weekend-div {
+  padding-top: 0px;
+  float: right;
+  padding-right: 40px;
+}
+
+.weekend-timer {
+  font-size: 75px;
+  margin-top: -20px;
+  color: white;
+}
+
+#weekend-subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
+
 #links {
   z-index: -10;
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 275px;
+  margin-top: 250px;
   float: left;
   text-align: left;
   width: 100%;
