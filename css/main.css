@@ -10,8 +10,13 @@ a, #new-timers-span {
 }
 
 
+#top-header {
+  color: #474747;
+}
+
 .end-div {
   padding: 50px;
+  padding-top: 15px;
 }
 
 .end-timer {
@@ -72,9 +77,7 @@ a, #new-timers-span {
 }
 
 .weekend-div {
-  float: left;
-  padding-top: 10px;
-  padding-left: 40px;
+  padding-top: 250px;
 }
 
 .weekend-timer {
@@ -95,7 +98,7 @@ a, #new-timers-span {
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 600px;
+  margin-top: 75px;
   float: left;
   text-align: left;
   width: 100%;
