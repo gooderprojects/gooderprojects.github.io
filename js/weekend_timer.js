@@ -18,17 +18,13 @@ function weekendTimer(countDownDate, now) {
   document.getElementById("weekend-minutes").innerHTML = minutes;
   document.getElementById("weekend-seconds").innerHTML = seconds;
 
-  if (days <= 7) {
-    document.getElementById("weekend-span").style.color = "red";
-    document.getElementById("weekend-subtitle").style.color = "red";
-  }
-
   if (timeleft_weekend < 0) {
       clearInterval(myfunc);
       console.log("End");
   }
 }
 
+// Will named this function, not me
 function fartFriday() {
   const current_date = new Date();
   var resultDate = new Date(current_date.getTime());
