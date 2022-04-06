@@ -50,34 +50,10 @@ a, #new-timers-span {
 }
 
 
-.sbreak-div {
+.weekend-div {
   padding-top: 0px;
   float: right;
   padding-right: 40px;
-}
-
-.sbreak-timer {
-  color: green;
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#sbreak-subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-#sbreak-hours, #sbreak-seconds {
-  color: lime;
-}
-
-#sbreak-days, #sbreak-minutes {
-  color: yellow;
-}
-
-.weekend-div {
-  padding-top: 250px;
 }
 
 .weekend-timer {
@@ -98,7 +74,7 @@ a, #new-timers-span {
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 75px;
+  margin-top: 250px;
   float: left;
   text-align: left;
   width: 100%;
