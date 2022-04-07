@@ -4,6 +4,8 @@
  * That's pretty much it
 */
 
+console.log("i can smell you.");
+
 function endTimer(countDownDate, now) {
   var timeleft_end = countDownDate - now;
 
