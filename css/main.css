@@ -9,13 +9,16 @@ a, #new-timers-span {
   color: #fc37ff;
 }
 
+#top-header {
+  color: #474747;
+}
+
 #title {
   font-size: 100px;
   margin-top: -50px;
 }
 
 #current-date, #current-date-title {
-  color: gray;
   font-size: 25px;
 }
 
