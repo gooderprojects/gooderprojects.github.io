@@ -29,7 +29,7 @@ function fartFriday() {
   const current_date = new Date();
   var resultDate = new Date(current_date.getTime());
   resultDate.setDate(current_date.getDate() + (7 + 5 - current_date.getDay()) % 7, "00:00:00");
-  resultDate.setHours(15, 0, 0, 1);
+  resultDate.setHours(15, 0, 1, 0);
   return resultDate;
 }
 
