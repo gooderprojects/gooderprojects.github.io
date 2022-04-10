@@ -4,23 +4,6 @@
  * That's pretty much it
 */
 
-function weekendTimer(countDownDate, now) {
-  var timeleft_end = countDownDate - now;
-  var timer_header = document.getElementById("sday-title");
-  timer_header.innerHTML = "Time Remaining Until The End of the Weekend:";
-
-  // Calculates time until countDownDate
-  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
-
-  document.getElementById("sday-days").innerHTML = days;
-  document.getElementById("sday-hours").innerHTML = hours;
-  document.getElementById("sday-minutes").innerHTML = minutes;
-  document.getElementById("sday-seconds").innerHTML = seconds;
-}
-
 function sdayTimer(countDownDate, now, school_time) {
   var date_var = new Date()
   var date_hours = date_var.getHours();
