@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+  font-family: arial;
+  color: white;
+}
+
+#header {
+  font-size: 50px;
+}
+
+.list-div {
+  color: black;
+  background-color: white;
+  width: 200px;
+  height: 100px;
+}
+
+#box-1 {
+  background-color: blue;
+  color: white;
+  float: left;
+  margin-left: 200px;
+  margin-top: 25px;
+}
