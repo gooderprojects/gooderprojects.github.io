@@ -18,11 +18,6 @@ function mainTimer(countDownDate, now) {
   document.getElementById("main-minutes").innerHTML = minutes;
   document.getElementById("main-seconds").innerHTML = seconds;
 
-  if (days <= 7) {
-    document.getElementById("main-span").style.color = "red";
-    document.getElementById("main-subtitle").style.color = "red";
-  }
-
   if (timeleft_main < 0) {
       clearInterval(myfunc);
       console.log("main");
