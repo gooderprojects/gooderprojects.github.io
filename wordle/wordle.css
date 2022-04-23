@@ -69,6 +69,12 @@ a {
   padding: 10px;
 }
 
+.game-desc {
+  font-weight: normal;
+  font-size: 20px;
+  color: #e0e0e0;
+}
+
 .site-subtitle {
   margin-bottom: 0px;
   padding: 10px;
