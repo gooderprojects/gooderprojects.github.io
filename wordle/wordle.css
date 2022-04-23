@@ -3,6 +3,10 @@ body {
   color: black;
 }
 
+a {
+  color: #fc37ff;
+}
+
 /* header */
 
 #header {
@@ -79,4 +83,20 @@ body {
   font-size: 17px;
   width: 150px;
   cursor: pointer;
+}
+
+/* footer */
+
+#links {
+  color: white;
+  font-family: arial;
+  z-index: -10;
+  position: absolute;
+  top: 1;
+  right: 0;
+  margin-top: 600px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  background-color: #5e5e5e;
 }
