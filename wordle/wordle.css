@@ -60,6 +60,8 @@ a {
 .link-div {
   background-color: #c9b458;
   border: 2px solid #d3d6da;
+  margin: 10px;
+  margin-bottom: 50px;
 }
 
 .site-title {
