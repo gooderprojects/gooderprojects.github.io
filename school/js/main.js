@@ -19,7 +19,7 @@ function mainTimer(countDownDate, now) {
   document.getElementById("main-seconds").innerHTML = seconds;
 
   if (timeleft_main < 0) {
-      window.open("maintenance.html", '_self');
+      window.open("maintenance.html", '_self')
   }
 }
 
@@ -33,7 +33,7 @@ var myfunc = setInterval(function() {
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_main = new Date("Apr 22, 2022 00:00:01").getTime();
+  var countDownDate_main = new Date("Apr 25, 2022 00:00:01").getTime();
   mainTimer(countDownDate_main, current_time);
 
   // No delay on open
