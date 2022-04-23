@@ -1,12 +1,19 @@
 console.log("i can smell you.");
 
 function setupLocalStorageVariable(item_key) {
-  if (localStorage.getItem("gooderprojects"+item_key) == null) {
-    localStorage.setItem("gooderprojects"+item_key, false);
+  if (item_key == "date") {
+    var date_data = String(new Date().getDate())+String(new Date().getMonth())+String(new Date().getFullYear())
+    localStorage.setItem("gooderprojectsdate", date_data)
+  } else {
+    if (localStorage.getItem("gooderprojects"+item_key) == null) {
+      localStorage.setItem("gooderprojects"+item_key, false);
+    }
   }
 }
 
 function onOpen() {
+  setupLocalStorageVariable("date");
+  // Add all wordles here
   setupLocalStorageVariable("wordle");
   setWebsiteDivs();
 }
@@ -22,6 +29,12 @@ function setIndividualDiv(website_div) {
 }
 
 function setWebsiteDivs() {
+  var date_data = String(new Date().getDate())+String(new Date().getMonth())+String(new Date().getFullYear());
+  if (localStorage.getItem("gooderprojectsdate") != date_data) {
+    // Add all wordles here
+    localStorage.setItem("wordle", false);
+  }
+  // Add all wordles here
   setIndividualDiv("wordle");
 }
 
