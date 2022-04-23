@@ -1,0 +1,111 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+a {
+  color: #fc37ff;
+}
+
+/* header */
+
+#header {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url('img/header_background.png');
+  font-family: arial;
+  border-bottom: 2px solid #d3d6da;
+}
+
+#header-header {
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 0px;
+}
+
+#home-button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+#home-icon {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#home-icon:hover {
+  background-color: gray;
+}
+
+/* main */
+#container {
+  width: 80%;
+  background-color: white;
+  color: white;
+  margin-top: 150px;
+  text-align: left;
+  font-family: arial;
+}
+
+.link-div {
+  background-color: #c9b458;
+  border: 2px solid #d3d6da;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
+.site-title {
+  margin-top: 0px;
+  padding: 10px;
+}
+
+.game-desc {
+  font-weight: normal;
+  font-size: 20px;
+  color: #e0e0e0;
+}
+
+.site-subtitle {
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
+.site-button {
+  background-color: #919191;
+  border: 4px solid #d3d6da;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  color: white;
+  float: right;
+  padding: 5px;
+  font-size: 17px;
+  width: 150px;
+  cursor: pointer;
+}
+
+/* footer */
+
+#links {
+  color: #787c7e;
+  border-top: 2px solid #d3d6da;
+  font-family: arial;
+  z-index: -10;
+  position: absolute;
+  top: 1;
+  right: 0;
+  margin-top: 100px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  background-image: url('img/footer_background.png');
+}
