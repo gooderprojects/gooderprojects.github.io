@@ -15,7 +15,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-image: url("header_background.png");
+  background-image: url('img/header_background.png');
   font-family: arial;
   border-bottom: 2px solid #d3d6da;
 }
@@ -96,15 +96,16 @@ a {
 /* footer */
 
 #links {
-  color: white;
+  color: #787c7e;
+  border-top: 2px solid #d3d6da;
   font-family: arial;
   z-index: -10;
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 600px;
+  margin-top: 100px;
   float: left;
   text-align: left;
   width: 100%;
-  background-color: #5e5e5e;
+  background-image: url('img/footer_background.png');
 }
