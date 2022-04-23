@@ -19,8 +19,7 @@ function mainTimer(countDownDate, now) {
   document.getElementById("main-seconds").innerHTML = seconds;
 
   if (timeleft_main < 0) {
-      clearInterval(myfunc);
-      console.log("main");
+      window.open("maintenance.html", '_self')
   }
 }
 
