@@ -12,7 +12,6 @@ function setupLocalStorageVariable(item_key) {
 }
 
 function onOpen() {
-  setupLocalStorageVariable("date");
   // Add all wordles here
   setupLocalStorageVariable("wordle");
   setupLocalStorageVariable("waffle");
@@ -51,6 +50,7 @@ function setWebsiteDivs() {
     localStorage.setItem("pokerhandle", false);
     localStorage.setItem("heardle", false);
     localStorage.setItem("waffle", false);
+    setupLocalStorageVariable("date");
   }
   // Add all wordles here
   setIndividualDiv("wordle");
