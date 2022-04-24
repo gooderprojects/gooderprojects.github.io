@@ -93,6 +93,13 @@ a {
   cursor: pointer;
 }
 
+.unfinished-div {
+  background-color: #787c7e;
+  border: 2px solid #d3d6da;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
 /* footer */
 
 #links {
@@ -103,7 +110,7 @@ a {
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 100px;
+  margin-top: 75px;
   float: left;
   text-align: left;
   width: 100%;
