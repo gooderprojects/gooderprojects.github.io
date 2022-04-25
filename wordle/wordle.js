@@ -2,7 +2,7 @@ console.log("i can smell you.");
 
 function setupLocalStorageVariable(item_key) {
   if (item_key == "date") {
-    var date_data = String(new Date().getDate())+String(new Date().getMonth())+String(new Date().getFullYear())
+    var date_data = String(new Date().getDate())+String(new Date().getMonth())+String(new Date().getFullYear());
     localStorage.setItem("gooderprojectsdate", date_data)
   } else {
     if (localStorage.getItem("gooderprojects"+item_key) == null) {
@@ -40,16 +40,17 @@ function setWebsiteDivs() {
   var date_data = String(new Date().getDate())+String(new Date().getMonth())+String(new Date().getFullYear());
   if (localStorage.getItem("gooderprojectsdate") != date_data) {
     // Add all wordles here
-    localStorage.setItem("wordle", false);
-    localStorage.setItem("squareword", false);
-    localStorage.setItem("octordle", false);
-    localStorage.setItem("gamedwtf", false);
-    localStorage.setItem("quordle", false);
-    localStorage.setItem("yeardle", false);
-    localStorage.setItem("dordle", false);
-    localStorage.setItem("pokerhandle", false);
-    localStorage.setItem("heardle", false);
-    localStorage.setItem("waffle", false);
+    localStorage.setItem("gooderprojectswordle", false);
+    localStorage.setItem("gooderprojectssquareword", false);
+    localStorage.setItem("gooderprojectsoctordle", false);
+    localStorage.setItem("gooderprojectsgamedwtf", false);
+    localStorage.setItem("gooderprojectsquordle", false);
+    localStorage.setItem("gooderprojectsyeardle", false);
+    localStorage.setItem("gooderprojectsdordle", false);
+    localStorage.setItem("gooderprojectspokerhandle", false);
+    localStorage.setItem("gooderprojectsheardle", false);
+    localStorage.setItem("gooderprojectswaffle", false);
+    console.log("Reset divs");
     setupLocalStorageVariable("date");
   }
   // Add all wordles here
