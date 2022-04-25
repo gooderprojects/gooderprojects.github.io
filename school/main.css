@@ -9,9 +9,37 @@ a, #new-timers-span {
   color: #fc37ff;
 }
 
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 20px;
+}
+
+#home-button {
+  float: left;
+  padding: 0px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+#home-icon {
+  width: 20px;
+  height: 20px;
+}
+
+#home-icon:hover {
+  background-color: grey;
+}
 
 #top-header {
   color: #474747;
+  padding-top: 10px;
 }
 
 .end-div {

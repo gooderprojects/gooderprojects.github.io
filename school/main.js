@@ -6,6 +6,11 @@ console.log("i can smell you.");
  * That's pretty much it
 */
 
+function goToHomePage() {
+  window.open("../index.html", '_self');
+  console.log("exited")
+}
+
 function endTimer(countDownDate, now) {
   var timeleft_end = countDownDate - now;
 
