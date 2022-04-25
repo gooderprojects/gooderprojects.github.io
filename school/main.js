@@ -26,7 +26,7 @@ function endTimer(countDownDate, now) {
   }
 
   if (timeleft_end < 0) {
-      clearInterval(myfunc);
+      window.open("maintenance.html", '_self');
       console.log("End");
   }
 }

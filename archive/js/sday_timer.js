@@ -1,8 +1,55 @@
+console.log("i can smell you.");
+
 /**
  * This code was written my me (https://github.com/Zbomb2000)
  * I don't really care what you do with it
  * That's pretty much it
 */
+
+function endTimer(countDownDate, now) {
+  var timeleft_end = countDownDate - now;
+
+  // Calculates time until countDownDate
+  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
+
+  document.getElementById("end-days").innerHTML = days;
+  document.getElementById("end-hours").innerHTML = hours;
+  document.getElementById("end-minutes").innerHTML = minutes;
+  document.getElementById("end-seconds").innerHTML = seconds;
+
+  if (days <= 7) {
+    document.getElementById("end-span").style.color = "red";
+    document.getElementById("end-subtitle").style.color = "red";
+  }
+
+  if (timeleft_end < 0) {
+      window.open("maintenance.html", '_self');
+      console.log("End");
+  }
+}
+
+function weekendTimer(countDownDate, now) {
+  var timeleft_weekend = countDownDate - now;
+
+  // Calculates time until countDownDate
+  var days = Math.floor(timeleft_weekend / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_weekend % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_weekend % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_weekend % (1000 * 60)) / 1000);
+
+  document.getElementById("weekend-days").innerHTML = days;
+  document.getElementById("weekend-hours").innerHTML = hours;
+  document.getElementById("weekend-minutes").innerHTML = minutes;
+  document.getElementById("weekend-seconds").innerHTML = seconds;
+
+  if (timeleft_weekend < 0) {
+      clearInterval(myfunc);
+      console.log("End");
+  }
+}
 
 function sdayTimer(countDownDate, now, school_time) {
   var date_var = new Date()
@@ -42,6 +89,15 @@ function sdayTimer(countDownDate, now, school_time) {
   document.getElementById("sday-seconds").innerHTML = seconds;
 }
 
+// Will named this function, not me
+function fartFriday() {
+  const current_date = new Date();
+  var resultDate = new Date(current_date.getTime());
+  resultDate.setDate(current_date.getDate() + (7 + 5 - current_date.getDay()) % 7, "00:00:00");
+  resultDate.setHours(15, 0, 1, 0);
+  return resultDate;
+}
+
 function getNextMonday() {
   var d = new Date();
   d.setDate(d.getDate() + (((1 + 7 - d.getDay()) % 7) || 7));
@@ -78,11 +134,21 @@ var delayVar = 0;
 
 // Main loop
 var myfunc = setInterval(function() {
+  const current_date = new Date();
   var countDownDate;
-  var current_time = new Date().getTime();
-  var date_var = new Date();
-  var day_var = getDayInformation();
+  const date_var = new Date();
+  const day_var = getDayInformation();
+  const current_time = current_date.getTime();
 
+  document.getElementById("current-date").innerHTML = new Date();
+
+  // Runs all timers
+  var countDownDate_end = new Date("May 26, 2022 15:00:01").getTime();
+  endTimer(countDownDate_end, current_time);
+
+  weekendTimer(fartFriday(), current_time);
+
+  // Runs sday timer
   if (schoolTime()) {
     countDownDate = new Date((date_var.getMonth()+1)+"/"+day_var+"/"+date_var.getFullYear()+" 15:00:01").getTime();
   } else {
@@ -91,11 +157,11 @@ var myfunc = setInterval(function() {
 
   if (date_var.getDay() == 6 || date_var.getDay() == 0) {
     countDownDate = new Date((date_var.getMonth()+1)+"/"+getNextMonday().getDate()+"/"+date_var.getFullYear()+" 00:00:01");
-    weekendTimer(countDownDate.getTime(), date_var.getTime());
+    sdayTimer(countDownDate.getTime(), date_var.getTime());
   } else if (date_var.getDay() == 5) {
     if (date_var.getHours() >= 15) {
       countDownDate = new Date((date_var.getMonth()+1)+"/"+getNextMonday().getDate()+"/"+date_var.getFullYear()+" 00:00:01");
-      weekendTimer(countDownDate.getTime(), date_var.getTime());
+      sdayTimer(countDownDate.getTime(), date_var.getTime());
     } else {
       sdayTimer(countDownDate, current_time, schoolTime());
     }

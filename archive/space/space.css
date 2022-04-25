@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+}
+
+#test {
+  text-align: center;
+  text-shadow: 0 0 3px #5a7f5a, 2px 0px 20px #00ff00;
+  color: #94cba7;
+  font-family: 'Courier New', monospace;
+}

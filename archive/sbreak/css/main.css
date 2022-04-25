@@ -1,0 +1,61 @@
+body  {
+  background-color: black;
+  color: white;
+  font-family: arial;
+  text-align: center;
+}
+
+a, #new-timers-span {
+  color: #fc37ff;
+}
+
+#top-header {
+  color: #474747;
+}
+
+#title {
+  font-size: 100px;
+  margin-top: -50px;
+}
+
+#current-date, #current-date-title {
+  font-size: 25px;
+}
+
+
+.main-div {
+  padding: 50px;
+}
+
+.main-timer {
+  color: green;
+  font-size: 75px;
+  margin-top: -25px;
+}
+
+#main-subtitle {
+  margin-top: -50px;
+  color: gray;
+  font-size: 15px;
+}
+
+#main-days, #main-minutes {
+  color: yellow;
+}
+
+#main-hours, #main-seconds {
+  color: lime;
+}
+
+
+#links {
+  z-index: -10;
+  position: absolute;
+  top: 1;
+  right: 0;
+  margin-top: 275px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  background-color: #494949;
+}
