@@ -28,6 +28,10 @@ function endTimer(countDownDate, now) {
   if (days <= 7) {
     document.getElementById("end-span").style.color = "red";
     document.getElementById("end-subtitle").style.color = "red";
+    document.getElementById("end-days").innerHTML = "red";
+    document.getElementById("end-hours").innerHTML = "red";
+    document.getElementById("end-minutes").innerHTML = "red";
+    document.getElementById("end-seconds").innerHTML = "red";
   }
 
   if (timeleft_end < 0) {
@@ -134,6 +138,64 @@ function getDayInformation() {
   }
 }
 
+function fenwickTimer(countDownDate, now) {
+  var timeleft_end = countDownDate - now;
+
+  // Calculates time until countDownDate
+  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
+
+  document.getElementById("fenwick-days").innerHTML = days;
+  document.getElementById("fenwick-hours").innerHTML = hours;
+  document.getElementById("fenwick-minutes").innerHTML = minutes;
+  document.getElementById("fenwick-seconds").innerHTML = seconds;
+
+  if (days <= 7) {
+    document.getElementById("fenwick-span").style.color = "red";
+    document.getElementById("fenwick-subtitle").style.color = "red";
+    document.getElementById("fenwick-days").innerHTML = "red";
+    document.getElementById("fenwick-hours").innerHTML = "red";
+    document.getElementById("fenwick-minutes").innerHTML = "red";
+    document.getElementById("fenwick-seconds").innerHTML = "red";
+  }
+
+  if (timeleft_end < 0) {
+      window.open("maintenance.html", '_self');
+      console.log("End");
+  }
+}
+
+function xTimer(countDownDate, now) {
+  var timeleft_end = countDownDate - now;
+
+  // Calculates time until countDownDate
+  var days = Math.floor(timeleft_end / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_end % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
+
+  document.getElementById("x-days").innerHTML = days;
+  document.getElementById("x-hours").innerHTML = hours;
+  document.getElementById("x-minutes").innerHTML = minutes;
+  document.getElementById("x-seconds").innerHTML = seconds;
+
+  if (days <= 7) {
+    document.getElementById("x-span").style.color = "red";
+    document.getElementById("x-subtitle").style.color = "red";
+    document.getElementById("x-days").innerHTML = "red";
+    document.getElementById("x-hours").innerHTML = "red";
+    document.getElementById("x-minutes").innerHTML = "red";
+    document.getElementById("x-seconds").innerHTML = "red";
+  }
+
+  if (timeleft_end < 0) {
+      window.open("maintenance.html", '_self');
+      console.log("End");
+  }
+}
+
 
 var delayVar = 0;
 
@@ -150,6 +212,9 @@ var myfunc = setInterval(function() {
   // Runs all timers
   var countDownDate_end = new Date("May 26, 2022 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
+
+  var countDownDate_end = new Date("May 19, 2022 15:00:01").getTime();
+  fenwickTimer(countDownDate_end, current_time);
 
   weekendTimer(fartFriday(), current_time);
 
