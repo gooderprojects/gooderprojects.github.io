@@ -137,8 +137,11 @@ var myfunc = setInterval(function() {
   var countDownDate_end = new Date("May 26, 2022 15:00:01").getTime();
   staticTimer("end", countDownDate_end, current_time, true);
 
-  var countDownDate_end = new Date("May 19, 2022 15:00:01").getTime();
-  staticTimer("fenwick", countDownDate_end, current_time, true);
+  var countDownDate_x = new Date("May 25, 2022 15:00:01").getTime();
+  staticTimer("x", countDownDate_x, current_time, true);
+
+  var countDownDate_fenwick = new Date("May 19, 2022 15:00:01").getTime();
+  staticTimer("fenwick", countDownDate_fenwick, current_time, true);
 
   staticTimer("weekend", fartFriday(), current_time, false);
 
