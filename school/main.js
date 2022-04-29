@@ -29,10 +29,10 @@ function staticTimer(timer, countDownDate, now, static_timer) {
     if (static_timer == true) {
       document.getElementById(timer+"-span").style.color = "red";
       document.getElementById(timer+"-subtitle").style.color = "red";
-      document.getElementById(timer+"-days").innerHTML = "red";
-      document.getElementById(timer+"-hours").innerHTML = "red";
-      document.getElementById(timer+"-minutes").innerHTML = "red";
-      document.getElementById(timer+"-seconds").innerHTML = "red";
+      document.getElementById(timer+"-days").style.color = "red";
+      document.getElementById(timer+"-hours").style.color = "red";
+      document.getElementById(timer+"-minutes").style.color = "red";
+      document.getElementById(timer+"-seconds").style.color = "red";
     }
   }
 
