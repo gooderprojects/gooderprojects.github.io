@@ -1,0 +1,7 @@
+{
+  end = {"days": None, "hours": None, "minutes": None, "seconds": None},
+  sday = {"days": None, "hours": None, "minutes": None, "seconds": None},
+  weekend = {"days": None, "hours": None, "minutes": None, "seconds": None},
+  fenwick = {"days": None, "hours": None, "minutes": None, "seconds": None},
+  x = {"days": None, "hours": None, "minutes": None, "seconds": None},
+}
