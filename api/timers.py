@@ -6,74 +6,52 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from pyvirtualdisplay import Display
 
-def getSeconds(timer):
-    if timer != "end" and timer != "sday" and timer != "weekend" and timer != "fenwick" and timer != "x":
-        return "Invalid timer."
-    else:
+class Timers:
+    driver = None
+    end = {"days": None, "hours": None, "minutes": None, "seconds": None}
+
+    def __init__(self):
         display = Display(visible=0, size=(800, 600))
         display.start()
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        self.driver.get("https://gooderprojects.github.io/school/json/index.html")
+        self.end["seconds"] = self.driver.find_element(By.ID, "end-seconds").text
 
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        driver.get("https://gooderprojects.github.io/school/json/index.html")
 
-        data = driver.find_element(By.ID, timer+"-seconds").text
+    def getSeconds(self, timer):
+        if timer != "end" and timer != "sday" and timer != "weekend" and timer != "fenwick" and timer != "x":
+            return "Invalid timer."
+        else:
+            data = self.driver.find_element(By.ID, timer+"-seconds").text
+            if data == self.end["seconds"]:
+                self.driver.get("https://gooderprojects.github.io/school/json/index.html")
+                new_data = self.driver.find_element(By.ID, timer+"-seconds").text
+                return new_data
+            else:
+                return data
 
-        driver.quit()
-        display.stop()
+    def getMinutes(self, timer):
+        if timer != "end" and timer != "sday" and timer != "weekend" and timer != "fenwick" and timer != "x":
+            return "Invalid timer."
+        else:
+            data = self.driver.find_element(By.ID, timer+"-minutes").text
+            return data
 
-        return data
+    def getHours(self, timer):
+        if timer != "end" and timer != "sday" and timer != "weekend" and timer != "fenwick" and timer != "x":
+            return "Invalid timer."
+        else:
+            data = self.driver.find_element(By.ID, timer+"-hours").text
+            return data
 
-def getMinutes(timer):
-    if timer != "end" or timer != "sday" or timer != "weekend" or timer != "fenwick" or timer != "x":
-        return "Invalid timer."
-    else:
-        display = Display(visible=0, size=(800, 600))
-        display.start()
+    def getDays(self, timer):
+        if timer != "end" and timer != "sday" and timer != "weekend" and timer != "fenwick" and timer != "x":
+            return "Invalid timer."
+        else:
+            data = self.driver.find_element(By.ID, timer+"-days").text
+            return data
 
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        driver.get("https://gooderprojects.github.io/school/json/index.html")
-
-        data = driver.find_element(By.ID, timer+"-minutes").text
-
-        driver.quit()
-        display.stop()
-
-        return data
-
-def getHours(timer):
-    if timer != "end" or timer != "sday" or timer != "weekend" or timer != "fenwick" or timer != "x":
-        return "Invalid timer."
-    else:
-        display = Display(visible=0, size=(800, 600))
-        display.start()
-
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        driver.get("https://gooderprojects.github.io/school/json/index.html")
-
-        data = driver.find_element(By.ID, timer+"-hours").text
-
-        driver.quit()
-        display.stop()
-
-        return data
-
-def getDays(timer):
-    if timer != "end" or timer != "sday" or timer != "weekend" or timer != "fenwick" or timer != "x":
-        return "Invalid timer."
-    else:
-        display = Display(visible=0, size=(800, 600))
-        display.start()
-
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        driver.get("https://gooderprojects.github.io/school/json/index.html")
-
-        data = driver.find_element(By.ID, timer+"-days").text
-
-        driver.quit()
-        display.stop()
-
-        return data
-
-def listTimers():
-    timer_list = ["end", "sday", "weekend", "fenwick", "x"]
-    return timer_list
+    @staticmethod
+    def listTimers():
+        timer_list = ["end", "sday", "weekend", "fenwick", "x"]
+        return timer_list
