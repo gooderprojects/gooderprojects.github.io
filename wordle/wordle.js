@@ -25,6 +25,9 @@ function onOpen() {
   setupLocalStorageVariable("squareword");
   setupLocalStorageVariable("nerdle");
   setupLocalStorageVariable("tridle");
+  setupLocalStorageVariable("wardle");
+  setupLocalStorageVariable("poeltl");
+  setupLocalStorageVariable("weddle");
   setWebsiteDivs();
 }
 
@@ -54,6 +57,9 @@ function setWebsiteDivs() {
     localStorage.setItem("gooderprojectswaffle", false);
     localStorage.setItem("gooderprojectstridle", false);
     localStorage.setItem("gooderprojectsnerdle", false);
+    localStorage.setItem("gooderprojectsweddle", false);
+    localStorage.setItem("gooderprojectspoeltl", false);
+    localStorage.setItem("gooderprojectswardle", false);
     console.log("Reset divs");
     setupLocalStorageVariable("date");
   }
@@ -69,7 +75,9 @@ function setWebsiteDivs() {
   setIndividualDiv("gamedwtf");
   setIndividualDiv("octordle");
   setIndividualDiv("nerdle");
-  setIndividualDiv("tridle");
+  setIndividualDiv("poeltl");
+  setIndividualDiv("wardle");
+  setIndividualDiv("weddle");
 }
 
 function returnToHomePage() {
