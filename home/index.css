@@ -35,6 +35,14 @@ a {
   margin-top: 25px;
 }
 
+#box-3 {
+  background-color: red;
+  color: white;
+  float: left;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+
 #links {
   z-index: -10;
   position: absolute;
