@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>School Timers</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="header">
+      <button id="home-button" type="button" onclick="goToHomePage();">
+        <img  id="home-icon" src="home_icon.png" alt="Home"></img>
+      </button>
+      <p style="text-align: center; color: black; font-weight: bold; margin-top: 0px;">Main Timers</p>
+    </div>
+
+    <div id="top-header">
+      <h2>Current date/time:</h2>
+      <h1 id="current-date">-:-:-:-</h1>
+    </div>
+
+    <div class="end-div">
+      <h2 id="end-title">Time Remaining Until Opening Night</h2>
+      <h1 class="end-timer"><span id="end-span"><span id="end-days">-</span>:<span id="end-hours">-</span>:<span id="end-minutes">-</span>:<span id="end-seconds">-</span></span></h1>
+      <h3 id="end-subtitle">Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds</h3>
+    </div>
+
+    <div class="techweek-div">
+      <h2 id="techweek-title" class="a-timer-title">Time Remaining Until Tech Week:</h2>
+      <h1 class="techweek-timer"><span id="techweek-span"><span id="techweek-days">-</span>:<span id="techweek-hours">-</span>:<span id="techweek-minutes">-</span>:<span id="techweek-seconds">-</span></span></h1>
+      <h3 id="techweek-subtitle">Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seconds</h3>
+    </div>
+
+    <div id="links">
+      <h1 style="padding-left: 10px;">Have any suggestions for <span id="new-timers-span" >new timers</span>?</h1>
+      <div style="padding-left: 25px;">
+        <h3> - Submit an issue on <a href="https://github.com/gooderprojects/gooderprojects.github.io/issues/new/choose">GitHub</a>!</h3>
+        <h3> - This is an open-source project. The code can be found <a href="https://github.com/gooderprojects/gooderprojects.github.io/">here</a>.</h3>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
