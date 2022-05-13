@@ -37,8 +37,10 @@ function staticTimer(timer, countDownDate, now, static_timer) {
   }
 
   if (timeleft_end < 0) {
+    if (timer != "weekend") {
       window.open("maintenance.html", '_self');
       console.log("End");
+    }
   }
 }
 
