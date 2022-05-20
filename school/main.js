@@ -59,9 +59,6 @@ var myfunc = setInterval(function() {
   var countDownDate_x = new Date("May 25, 2022 15:00:01").getTime();
   staticTimer("x", countDownDate_x, current_time, true);
 
-  var countDownDate_fenwick = new Date("May 19, 2022 15:00:01").getTime();
-  staticTimer("fenwick", countDownDate_fenwick, current_time, true);
-
   // No delay on open
   if (delayVar == 0) {
     delayVar = 1000;
