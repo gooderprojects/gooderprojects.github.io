@@ -100,42 +100,13 @@ a, #new-timers-span {
   font-size: 20px;
 }
 
-.x-div {
-  padding-top: 10px;
-  padding-right: 10px;
-}
-
-.x-timer {
-  font-size: 75px;
-  margin-top: -20px;
-  color: white;
-}
-
-#x-span {
-  color: gray;
-}
-
-#x-subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-#x-days, #x-minutes {
-  color: blue;
-}
-
-#x-hours, #x-seconds {
-  color: white;
-}
-
 
 #links {
   z-index: -10;
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 200px;
+  margin-top: 300px;
   float: left;
   text-align: left;
   width: 100%;
