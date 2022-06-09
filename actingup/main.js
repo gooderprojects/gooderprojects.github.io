@@ -27,7 +27,7 @@ function staticTimer(timer, countDownDate, now, static_timer) {
 
   if (days <= 7) {
     if (static_timer == true) {
-      docuent.getElementById(timer+"-title").style.color = "red";
+      document.getElementById(timer+"-title").style.color = "red";
       document.getElementById(timer+"-span").style.color = "red";
       document.getElementById(timer+"-subtitle").style.color = "red";
       document.getElementById(timer+"-days").style.color = "red";
@@ -56,9 +56,6 @@ var myfunc = setInterval(function() {
   // Runs all timers
   var countDownDate_end = new Date("Jun 10, 2022 00:00:01").getTime();
   staticTimer("end", countDownDate_end, current_time, true);
-
-  var countDownDate_fenwick = new Date("Jun 5, 2022 15:00:01").getTime();
-  staticTimer("techweek", countDownDate_fenwick, current_time, true);
 
   // No delay on open
   if (delayVar == 0) {
