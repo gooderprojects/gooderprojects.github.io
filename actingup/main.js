@@ -38,7 +38,7 @@ function staticTimer(timer, countDownDate, now, static_timer) {
   }
 
   if (timeleft_end < 0) {
-    window.open("maintenance.html", '_self');
+    window.open("../maintenance.html", '_self');
     console.log("End");
   }
 }

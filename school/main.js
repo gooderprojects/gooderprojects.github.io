@@ -39,7 +39,7 @@ function staticTimer(timer, countDownDate, now, static_timer) {
   if (timeleft_end <= 0) {
     console.log("End");
     clearInterval(myfunc);
-    window.open("maintenance.html", '_self');
+    window.open("../maintenance.html", '_self');
   }
 }
 
