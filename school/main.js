@@ -54,7 +54,7 @@ var myfunc = setInterval(function() {
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_end = new Date("Aug 17, 2022 00:00:01").getTime();
+  var countDownDate_end = new Date("May 25, 2023 00:15:01").getTime();
   staticTimer("end", countDownDate_end, current_time, true);
 
   // No delay on open
