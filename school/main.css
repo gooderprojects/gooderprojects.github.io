@@ -9,42 +9,9 @@ a, #new-timers-span {
   color: #fc37ff;
 }
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  height: 20px;
-}
-
-#home-button {
-  float: left;
-  padding: 0px;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 20px;
-  height: 20px;
-}
-
-#home-icon {
-  width: 20px;
-  height: 20px;
-}
-
-#home-icon:hover {
-  background-color: grey;
-}
-
-#top-header {
-  color: #474747;
-  padding-top: 10px;
-}
 
 .end-div {
   padding: 50px;
-  padding-top: 15px;
 }
 
 .end-timer {
@@ -58,46 +25,34 @@ a, #new-timers-span {
   font-size: 25px;
 }
 
-
-.sday-div {
+.cbreak-div {
   padding-top: 0px;
-  float: left;
-  padding-left: 40px;
-}
-
-.sday-timer {
-  color: white;
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#sday-subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-
-.weekend-div {
-  padding-top: 0px;
-  float: right;
+  text-align: center;
   padding-right: 40px;
 }
 
-.weekend-timer {
+.cbreak-timer {
+  color: green;
   font-size: 75px;
   margin-top: -20px;
-  color: white;
 }
 
-#weekend-subtitle {
+#cbreak-subtitle {
   margin-top: -20px;
   color: gray;
   font-size: 15px;
 }
 
-.a-timer-title {
-  font-size: 20px;
+#cbreak-span {
+  color: yellow;
+}
+
+#cbreak-hours, #cbreak-seconds {
+  color: green;
+}
+
+#cbreak-days, #cbreak-minutes {
+  color: red;
 }
 
 
@@ -106,7 +61,7 @@ a, #new-timers-span {
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 300px;
+  margin-top: 275px;
   float: left;
   text-align: left;
   width: 100%;
