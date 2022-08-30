@@ -1,17 +1,12 @@
-console.log("i can smell you.");
+console.log("i can smell you");
 
 /**
- * This code was written my me (https://github.com/Zbomb2000)
+ * This code was written my me (github.com/Zbomb2000)
  * I don't really care what you do with it
  * That's pretty much it
 */
 
-function goToHomePage() {
-  window.open("../index.html", '_self');
-  console.log("exited")
-}
-
-function staticTimer(timer, countDownDate, now, static_timer) {
+function endTimer(countDownDate, now) {
   var timeleft_end = countDownDate - now;
 
   // Calculates time until countDownDate
@@ -20,25 +15,49 @@ function staticTimer(timer, countDownDate, now, static_timer) {
   var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
 
-  document.getElementById(timer+"-days").innerHTML = days;
-  document.getElementById(timer+"-hours").innerHTML = hours;
-  document.getElementById(timer+"-minutes").innerHTML = minutes;
-  document.getElementById(timer+"-seconds").innerHTML = seconds;
+  document.getElementById("end-days").innerHTML = days;
+  document.getElementById("end-hours").innerHTML = hours;
+  document.getElementById("end-minutes").innerHTML = minutes;
+  document.getElementById("end-seconds").innerHTML = seconds;
 
   if (days <= 7) {
-    if (static_timer == true) {
-      document.getElementById(timer+"-span").style.color = "red";
-      document.getElementById(timer+"-subtitle").style.color = "red";
-      document.getElementById(timer+"-days").style.color = "red";
-      document.getElementById(timer+"-hours").style.color = "red";
-      document.getElementById(timer+"-minutes").style.color = "red";
-      document.getElementById(timer+"-seconds").style.color = "red";
-    }
+    document.getElementById("end-span").style.color = "red";
+    document.getElementById("end-subtitle").style.color = "red";
   }
 
-  if (timeleft_end <= 0) {
-    console.log("End");
+  if (timeleft_end < 0) {
     clearInterval(myfunc);
+    console.log("End");
+    window.open("../maintenance.html", '_self');
+  }
+}
+
+function cbreakTimer(countDownDate, now) {
+  var timeleft_cbreak = countDownDate - now;
+
+  // Calculates time until countDownDate
+  var days = Math.floor(timeleft_cbreak / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_cbreak % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_cbreak % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_cbreak % (1000 * 60)) / 1000);
+
+  document.getElementById("cbreak-days").innerHTML = days;
+  document.getElementById("cbreak-hours").innerHTML = hours;
+  document.getElementById("cbreak-minutes").innerHTML = minutes;
+  document.getElementById("cbreak-seconds").innerHTML = seconds;
+
+  if (days <= 7) {
+    document.getElementById("cbreak-span").style.color = "red";
+    document.getElementById("cbreak-days").style.color = "red";
+    document.getElementById("cbreak-hours").style.color = "red";
+    document.getElementById("cbreak-minutes").style.color = "red";
+    document.getElementById("cbreak-seconds").style.color = "red";
+    document.getElementById("cbreak-subtitle").style.color = "red";
+  }
+
+  if (timeleft_cbreak < 0) {
+    clearInterval(myfunc);
+    console.log("End");
     window.open("../maintenance.html", '_self');
   }
 }
@@ -48,14 +67,16 @@ var delayVar = 0;
 
 // Main loop
 var myfunc = setInterval(function() {
-  const current_date = new Date();
-  const current_time = current_date.getTime();
+  var current_time = new Date().getTime();
 
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_end = new Date("May 25, 2023 00:15:01").getTime();
-  staticTimer("end", countDownDate_end, current_time, true);
+  var countDownDate_end = new Date("May 25, 2023 15:00:01").getTime();
+  endTimer(countDownDate_end, current_time);
+
+  var countDownDate_cbreak = new Date("Dec 21, 2022 15:00:01").getTime();
+  cbreakTimer(countDownDate_cbreak, current_time);
 
   // No delay on open
   if (delayVar == 0) {
