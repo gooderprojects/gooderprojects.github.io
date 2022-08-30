@@ -75,7 +75,7 @@ var myfunc = setInterval(function() {
   var countDownDate_end = new Date("May 25, 2023 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
-  var countDownDate_cbreak = new Date("Dec 17, 2022 15:00:01").getTime();
+  var countDownDate_cbreak = new Date("Dec 21, 2022 15:00:01").getTime();
   cbreakTimer(countDownDate_cbreak, current_time);
 
   // No delay on open
