@@ -10,6 +10,11 @@ a, #new-timers-span {
 }
 
 
+#top-header {
+  color: gray;
+}
+
+
 .end-div {
   padding: 50px;
 }

@@ -72,7 +72,7 @@ var myfunc = setInterval(function() {
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_end = new Date("May 26, 2023 15:00:01").getTime();
+  var countDownDate_end = new Date("May 25, 2023 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
   var countDownDate_cbreak = new Date("Dec 17, 2022 15:00:01").getTime();
