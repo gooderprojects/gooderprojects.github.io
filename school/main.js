@@ -62,6 +62,36 @@ function cbreakTimer(countDownDate, now) {
   }
 }
 
+function tbreakTimer(countDownDate, now) {
+  var timeleft_tbreak = countDownDate - now;
+
+  // Calculates time until countDownDate
+  var days = Math.floor(timeleft_tbreak / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_tbreak % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_tbreak % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_tbreak % (1000 * 60)) / 1000);
+
+  document.getElementById("tbreak-days").innerHTML = days;
+  document.getElementById("tbreak-hours").innerHTML = hours;
+  document.getElementById("tbreak-minutes").innerHTML = minutes;
+  document.getElementById("tbreak-seconds").innerHTML = seconds;
+
+  if (days <= 7) {
+    document.getElementById("tbreak-span").style.color = "red";
+    document.getElementById("tbreak-days").style.color = "red";
+    document.getElementById("tbreak-hours").style.color = "red";
+    document.getElementById("tbreak-minutes").style.color = "red";
+    document.getElementById("tbreak-seconds").style.color = "red";
+    document.getElementById("tbreak-subtitle").style.color = "red";
+  }
+
+  if (timeleft_tbreak < 0) {
+    clearInterval(myfunc);
+    console.log("End");
+    window.open("../maintenance.html", '_self');
+  }
+}
+
 
 var delayVar = 0;
 
@@ -77,6 +107,9 @@ var myfunc = setInterval(function() {
 
   var countDownDate_cbreak = new Date("Dec 21, 2022 15:00:01").getTime();
   cbreakTimer(countDownDate_cbreak, current_time);
+
+  var countDownDate_tbreak = new Date("Nov 23, 2022 15:00:01").getTime();
+  tbreakTimer(countDownDate_tbreak, current_time);
 
   // No delay on open
   if (delayVar == 0) {
