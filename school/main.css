@@ -61,6 +61,36 @@ a, #new-timers-span {
   color: red;
 }
 
+.sbreak-div {
+  padding-top: 200px;
+  text-align: center;
+  padding-right: 40px;
+}
+
+.sbreak-timer {
+  color: white;
+  font-size: 75px;
+  margin-top: -20px;
+}
+
+#sbreak-subtitle {
+  margin-top: -20px;
+  color: gray;
+  font-size: 15px;
+}
+
+#sbreak-span {
+  color: gray;
+}
+
+#sbreak-hours, #sbreak-seconds {
+  color: white;
+}
+
+#sbreak-days, #sbreak-minutes {
+  color: white;
+}
+
 .tbreak-div {
   padding-top: 0px;
   text-align: center;
@@ -98,7 +128,7 @@ a, #new-timers-span {
   position: absolute;
   top: 1;
   right: 0;
-  margin-top: 275px;
+  margin-top: 250px;
   float: left;
   text-align: left;
   width: 100%;
