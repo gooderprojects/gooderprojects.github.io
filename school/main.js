@@ -141,7 +141,7 @@ var myfunc = setInterval(function() {
   var countDownDate_tbreak = new Date("Nov 23, 2022 15:00:01").getTime();
   tbreakTimer(countDownDate_tbreak, current_time);
 
-  var countDownDate_sbreak = new Date("Apr 20, 2023 15:00:01").getTime();
+  var countDownDate_sbreak = new Date("Apr 18, 2023 15:00:01").getTime();
   sbreakTimer(countDownDate_sbreak, current_time);
 
   // No delay on open
