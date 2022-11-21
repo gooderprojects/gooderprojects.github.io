@@ -99,7 +99,7 @@ a, #new-timers-span {
 }
 
 .tbreak-timer {
-  color: green;
+  color: white;
   font-size: 75px;
   margin-top: -20px;
 }
@@ -111,15 +111,7 @@ a, #new-timers-span {
 }
 
 #tbreak-span {
-  color: red;
-}
-
-#tbreak-hours, #tbreak-seconds {
-  color: orange;
-}
-
-#tbreak-days, #tbreak-minutes {
-  color: yellow;
+  color: white;
 }
 
 
