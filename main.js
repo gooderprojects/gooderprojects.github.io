@@ -32,7 +32,7 @@ function endTimer(countDownDate, now) {
   }
 }
 
-function cbreakTimer(countDownDate, now) {
+/*function cbreakTimer(countDownDate, now) {
   var timeleft_cbreak = countDownDate - now;
 
   // Calculates time until countDownDate
@@ -61,6 +61,7 @@ function cbreakTimer(countDownDate, now) {
     window.open("../maintenance.html", '_self');
   }
 }
+*/
 
 function tbreakTimer(countDownDate, now) {
   var timeleft_tbreak = countDownDate - now;
@@ -134,9 +135,6 @@ var myfunc = setInterval(function() {
   // Runs all timers
   var countDownDate_end = new Date("May 25, 2023 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
-
-  var countDownDate_cbreak = new Date("Dec 20, 2022 15:00:01").getTime();
-  cbreakTimer(countDownDate_cbreak, current_time);
 
   var countDownDate_tbreak = new Date("Feb 23, 2023 15:00:01").getTime();
   tbreakTimer(countDownDate_tbreak, current_time);

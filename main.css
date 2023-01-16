@@ -15,56 +15,27 @@ a, #new-timers-span {
 }
 
 
-.cbreak-div {
+.end-div {
   padding: 50px;
 }
 
-.cbreak-timer {
-  color: green;
+.end-timer {
+  color: white;
   font-size: 125px;
   margin-top: -25px;
 }
 
-#cbreak-subtitle {
+#end-subtitle {
   margin-top: -75px;
   color: gray;
   font-size: 25px;
 }
 
-#cbreak-span {
-  color: yellow;
-}
-
-#cbreak-hours, #cbreak-seconds {
-  color: green;
-}
-
-#cbreak-days, #cbreak-minutes {
-  color: red;
-}
-
-.end-div {
+.sbreak-div {
   padding-top: 0px;
   text-align: center;
   padding-left: 40px;
   float: left;
-}
-
-.end-timer {
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#end-subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-.sbreak-div {
-  padding-top: 200px;
-  text-align: center;
-  padding-right: 40px;
 }
 
 .sbreak-timer {
