@@ -82,7 +82,15 @@ a, #new-timers-span {
 }
 
 #tbreak-span {
-  color: white;
+  color: green;
+}
+
+#tbreak-hours, #tbreak-seconds {
+  color: lime;
+}
+
+#tbreak-days, #tbreak-minutes {
+  color: yellow;
 }
 
 

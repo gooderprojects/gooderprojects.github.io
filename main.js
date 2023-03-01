@@ -28,7 +28,7 @@ function endTimer(countDownDate, now) {
   if (timeleft_end < 0) {
     clearInterval(myfunc);
     console.log("End");
-    window.open("../maintenance.html", '_self');
+    window.open("maintenance.html", '_self');
   }
 }
 
@@ -89,7 +89,7 @@ function tbreakTimer(countDownDate, now) {
   if (timeleft_tbreak < 0) {
     clearInterval(myfunc);
     console.log("End");
-    window.open("../maintenance.html", '_self');
+    //window.open("maintenance.html", '_self');
   }
 }
 
@@ -119,7 +119,7 @@ function sbreakTimer(countDownDate, now) {
   if (timeleft_sbreak < 0) {
     clearInterval(myfunc);
     console.log("End");
-    window.open("../maintenance.html", '_self');
+    window.open("maintenance.html", '_self');
   }
 }
 
@@ -136,7 +136,7 @@ var myfunc = setInterval(function() {
   var countDownDate_end = new Date("May 25, 2023 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
-  var countDownDate_tbreak = new Date("Feb 23, 2023 15:00:01").getTime();
+  var countDownDate_tbreak = new Date("Apr 7, 2023 15:00:01").getTime();
   tbreakTimer(countDownDate_tbreak, current_time);
 
   var countDownDate_sbreak = new Date("Apr 18, 2023 15:00:01").getTime();
