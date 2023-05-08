@@ -61,7 +61,7 @@ function endTimer(countDownDate, now) {
     window.open("../maintenance.html", '_self');
   }
 }
-*/
+
 
 function tbreakTimer(countDownDate, now) {
   var timeleft_tbreak = countDownDate - now;
@@ -122,7 +122,7 @@ function sbreakTimer(countDownDate, now) {
     window.open("maintenance.html", '_self');
   }
 }
-
+*/
 
 var delayVar = 0;
 
@@ -133,14 +133,8 @@ var myfunc = setInterval(function() {
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_end = new Date("May 25, 2023 15:00:01").getTime();
+  var countDownDate_end = new Date("May 22, 2023 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
-
-  var countDownDate_tbreak = new Date("Apr 7, 2023 15:00:01").getTime();
-  tbreakTimer(countDownDate_tbreak, current_time);
-
-  var countDownDate_sbreak = new Date("Apr 18, 2023 15:00:01").getTime();
-  sbreakTimer(countDownDate_sbreak, current_time);
 
   // No delay on open
   if (delayVar == 0) {

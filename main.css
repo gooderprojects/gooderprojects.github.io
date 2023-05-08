@@ -31,69 +31,6 @@ a, #new-timers-span {
   font-size: 25px;
 }
 
-.sbreak-div {
-  padding-top: 0px;
-  text-align: center;
-  padding-left: 40px;
-  float: left;
-}
-
-.sbreak-timer {
-  color: white;
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#sbreak-subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-#sbreak-span {
-  color: gray;
-}
-
-#sbreak-hours, #sbreak-seconds {
-  color: white;
-}
-
-#sbreak-days, #sbreak-minutes {
-  color: white;
-}
-
-.tbreak-div {
-  padding-top: 0px;
-  text-align: center;
-  padding-right: 40px;
-  float: right;
-}
-
-.tbreak-timer {
-  color: white;
-  font-size: 75px;
-  margin-top: -20px;
-}
-
-#tbreak-subtitle {
-  margin-top: -20px;
-  color: gray;
-  font-size: 15px;
-}
-
-#tbreak-span {
-  color: green;
-}
-
-#tbreak-hours, #tbreak-seconds {
-  color: lime;
-}
-
-#tbreak-days, #tbreak-minutes {
-  color: yellow;
-}
-
-
 #links {
   z-index: -10;
   position: absolute;
