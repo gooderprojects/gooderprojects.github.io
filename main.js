@@ -20,6 +20,8 @@ function endTimer(countDownDate, now) {
   document.getElementById("end-minutes").innerHTML = minutes;
   document.getElementById("end-seconds").innerHTML = seconds;
 
+  document.getElementById("titleid").innerHTML = days.toString()+" days left...";
+
   if (days <= 7) {
     document.getElementById("end-span").style.color = "red";
     document.getElementById("end-subtitle").style.color = "red";
