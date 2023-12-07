@@ -8,6 +8,7 @@ let bp = 0;
 
 if (localStorage.getItem("cookie1") == "NaN" || localStorage.getItem("tbfs") == "NaN" || localStorage.getItem("grandmas") == "NaN" || localStorage.getItem("belts") == "NaN" || localStorage.getItem("tbfp") == "NaN" || localStorage.getItem("gmp") == "NaN" || localStorage.getItem("bp") == "NaN") {
 	saveData();
+	window.location.reload();
 }
 
 function loadData() {
