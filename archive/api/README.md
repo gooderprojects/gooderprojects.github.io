@@ -1,3 +1,4 @@
+## WARNING: This is a piece of garbage. Please never use this.
 # Timer API
 I'm not exactly sure what qualifies as an API, but I think this does.
 
