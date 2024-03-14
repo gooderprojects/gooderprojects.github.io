@@ -3,11 +3,16 @@
 <html>
 	<head>
 		<title>Not a virus</title>
+		<script>
+			triggerVirus() {
+				document.getElementById('teeext').style.visibility = 'visible';
+				alert('Hi, I am an Albanian virus but because of poor technology in my country unfortunatley I am not able to harm your computer.\n\nPlease be so kind to delete one of your important files yourself and then forward me to other users.\n\nMany thanks for your cooperation! Best regards,\n        -Albanian virus');
+			}
+		</script>
 	</head>
 	<body>
 		<h1 style="font-size: 70px;">freemoney.com</h1>
-		<!--<button onclick="document.getElementById('teeext').style.visibility = 'visible';">Click here to download free money (this is definitely not a virus)</button>-->
-		<button style="font-size: 50px" onclick="alert('Hi, I am an Albanian virus but because of poor technology in my country unfortunatley I am not able to harm your computer.\n\nPlease be so kind to delete one of your important files yourself and then forward me to other users.\n\nMany thanks for your cooperation! Best regards,\n        -Albanian virus');">Click here to download free money</button>
+		<button style="font-size: 50px" onclick="triggerVirus()">Click here to download free money</button>
 		<p style="visibility: hidden; color: red;" id="teeext">You have been hacked!</p>
 	</body>
 </html>
