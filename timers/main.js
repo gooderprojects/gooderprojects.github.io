@@ -25,6 +25,7 @@ function endTimer(countDownDate, now) {
   if (days <= 7) {
     document.getElementById("end-span").style.color = "red";
     document.getElementById("end-subtitle").style.color = "red";
+    document.getElementById("timer-title").style.color = "red";
   }
 
   if (timeleft_end < 0) {
