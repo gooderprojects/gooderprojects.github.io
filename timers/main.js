@@ -15,11 +15,13 @@ function endTimer(countDownDate, now) {
   var minutes = Math.floor((timeleft_end % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((timeleft_end % (1000 * 60)) / 1000);
 
+  // Sets time on timer
   document.getElementById("end-days").innerHTML = days;
   document.getElementById("end-hours").innerHTML = hours;
   document.getElementById("end-minutes").innerHTML = minutes;
   document.getElementById("end-seconds").innerHTML = seconds;
 
+  // Updates site title
   document.getElementById("titleid").innerHTML = days.toString()+" days left...";
 
   if (days <= 7) {
