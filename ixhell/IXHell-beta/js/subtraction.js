@@ -9,6 +9,21 @@ console.log("I recommend not using the console to cheat.");
 console.log("It makes it not fun.");
 console.log("That's pretty much it.");
 
+
+// Helps with security or something
+function escapeHtml(str) {
+    return str.replace(/[&<>"']/g, function (match) {
+        return {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[match];
+    });
+}
+
+
 qnum_save = localStorage.getItem("question_num_sub");
 ss_save = localStorage.getItem("ss_subtraction");
 if (qnum_save == null) {
@@ -62,10 +77,10 @@ function submitAnswer() {
 
   document.getElementById("incorrect-header").innerHTML = randomizeHeader();
   if (user_answer == answer) {
-    incorrect_text.innerHTML = "The correct answer was '"+(parseInt(answer)-1)+"'. You answered '"+user_answer+"'.";
+    incorrect_text.innerHTML = "The correct answer was '"+escapeHtml((parseInt(answer)-1))+"'. You answered '"+escapeHtml(user_answer)+"'.";
   }
   else {
-    incorrect_text.innerHTML = "The correct answer was '"+answer+"'. You answered '"+user_answer+"'.";
+    incorrect_text.textContent = "The correct answer was '" + escapeHtml(answer) + "'. You answered '" + escapeHtml(user_answer) + "'.";
   }
   frame2.style.zIndex = "4";
 
