@@ -37,6 +37,34 @@ function endTimer(countDownDate, now) {
   }
 }
 
+/*
+ * [IMPORTANT]
+ * When the main timer (main) runs out, quickly switch it to the x timer
+ * Delete the xTimer function from this code and delete the timer from the html
+ */
+
+function xTimer(countDownDate, now) {
+  var timeleft_x = countDownDate - now;
+
+  // Calculates time until countDownDate
+  var days = Math.floor(timeleft_x / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft_x % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft_x % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft_x % (1000 * 60)) / 1000);
+
+  // Sets time on timer
+  document.getElementById("x-days").innerHTML = days;
+  document.getElementById("x-hours").innerHTML = hours;
+  document.getElementById("x-minutes").innerHTML = minutes;
+  document.getElementById("x-seconds").innerHTML = seconds;
+
+  if (timeleft_x < 0) {
+    clearInterval(myfunc);
+    console.log("End");
+    window.open("maintenance.html", '_self');
+  }
+}
+
 var delayVar = 0;
 
 // Main loop
@@ -48,6 +76,9 @@ var myfunc = setInterval(function() {
   // Runs all timers
   var countDownDate_end = new Date("May 24, 2024 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
+  
+  var countDownDate_x = new Date("May 24, 2024 15:00:01").getTime();
+  xTimer(countDownDate_x, current_time);
 
   // No delay on open
   if (delayVar == 0) {
