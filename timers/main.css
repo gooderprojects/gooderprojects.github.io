@@ -41,6 +41,10 @@ a, #new-timers-span {
   margin-top: -25px;
 }
 
+#x-timer-title {
+  font-size: 20px;
+}
+
 #x-subtitle {
   margin-top: -75px;
   color: gray;
