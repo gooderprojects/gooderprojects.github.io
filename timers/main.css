@@ -31,6 +31,22 @@ a, #new-timers-span {
   font-size: 25px;
 }
 
+.x-div {
+  padding: 50px;
+}
+
+.x-timer {
+  color: white;
+  font-size: 100px;
+  margin-top: -100px;
+}
+
+#x-subtitle {
+  margin-top: -75px;
+  color: gray;
+  font-size: 20px;
+}
+
 #links {
   z-index: -10;
   position: absolute;
