@@ -74,10 +74,10 @@ var myfunc = setInterval(function() {
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_end = new Date("May 24, 2024 15:00:01").getTime();
+  var countDownDate_end = new Date("May 24, 2024 12:00:01").getTime();
   endTimer(countDownDate_end, current_time);
   
-  var countDownDate_x = new Date("May 24, 2024 15:00:01").getTime();
+  var countDownDate_x = new Date("May 30, 2024 12:00:01").getTime();
   xTimer(countDownDate_x, current_time);
 
   // No delay on open
