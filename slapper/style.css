@@ -48,6 +48,11 @@ html {
   transition: transform 0.5s;
 }
 
+/*#cookie-img:hover {
+  transition: transform 0.5s;
+  transform: scale(1.1);
+}*/
+
 #cookie-button {
   width: 450px;
   height: 450px;
@@ -56,18 +61,13 @@ html {
   border: none;
 }
 
-#cookie-img:hover {
-  transition: transform 0.5s;
-  transform: scale(1.1);
-}
-
 /* Define pulse animation */
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
@@ -75,7 +75,7 @@ html {
 }
 
 .pulse-animation {
-  animation: pulse;
+  animation: pulse 0.3s forwards; /* Make the animation play once and stay at the end */
 }
 
 .shrink {
