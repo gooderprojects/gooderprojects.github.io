@@ -48,17 +48,18 @@ html {
   transition: transform 0.5s;
 }
 
-/*#cookie-img:hover {
-  transition: transform 0.5s;
-  transform: scale(1.1);
-}*/
-
 #cookie-button {
   width: 450px;
   height: 450px;
   cursor: none;
   background-color: Transparent;
   border: none;
+  transition: transform 0.5s;
+}
+
+#cookie-button:hover {
+  transition: transform 0.5s;
+  transform: scale(1.1);
 }
 
 /* Define pulse animation */
