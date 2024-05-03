@@ -4,23 +4,32 @@
 	<head>
 		<title>Cookie clicker no virus</title>
 		<script src="main.js"></script>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<p><strong>NOTE:</strong> If the game doesn't seem to work, try reloading the page.</p>
-		<h1>Cookie slapper</h1>
-		<h1 id="counter" >LOADING...</h1>
-		<h3 id="cps"> cookies per second</h3>
-		<button style="width: 400px; height: 400px;" onclick="clickCookie()"><img style="width: 350px; height: 350px;" src="cookie.png"></button>
+		<h1 class="prevent-select">Cookie slapper</h1>
+		<h1 id="counter" class="prevent-select">LOADING...</h1>
+		<h3 id="cps" class="prevent-select"> cookies per second</h3>
+		<button id="cookie-button" class="prevent-select" onclick="clickCookie()"><img id="cookie-img" style="width: 350px; height: 350px;" src="img/cookie.png"></button>
+		
+		<div id="shop-div">
 		<h2> - Shop - </h2>
-		<button id="tbfs" onclick="button1();">0 - 2x4s (whack the cookies with a piece of wood)</button>
+		<button class="shop-button" id="tbfs" onclick="button1();">0 - 2x4s (whack the cookies with a piece of wood)</button>
 		</br>
 		</br>
-		<button id="grandmas" onclick="button2();">0 - Grandmas (whack the cookies with your grandma)</button>
+		<button class="shop-button" id="grandmas" onclick="button2();">0 - Grandmas (whack the cookies with your grandma)</button>
 		</br>
 		</br>
-		<button id="belts" onclick="button3();">0 - Belts (whack the cookies with a belt)</button>
+		<button class="shop-button" id="belts" onclick="button3();">0 - Belts (whack the cookies with a belt)</button>
+		</div>	
+
 		</br>
 		</br>
 		<button onclick="resetData();">reset data</button>
+		<div id="follow"><img id="hand-image" src="img/slapper-arm.png" /></div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="mousestuff.js"></script>
+		<script type="text/javascript" src="handshrink.js"></script>
 	</body>
 </html>
