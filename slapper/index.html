@@ -8,7 +8,6 @@
 	</head>
 	<body>
 		<h1 class="prevent-select">Cookie slapper</h1>
-		<p><strong>NOTE:</strong> If the game doesn't seem to work, try reloading the page.</p>
 		<h1 id="counter" class="prevent-select">LOADING...</h1>
 		<h3 id="cps" class="prevent-select"> cookies per second</h3>
 		<button id="cookie-button" class="prevent-select" onclick="clickCookie()"><img id="cookie-img" style="width: 350px; height: 350px;" src="img/cookie.png"></button>
@@ -28,6 +27,10 @@
 		</br>
 		<button onclick="resetData();">reset data</button>
 		<div id="follow"><img id="hand-image" src="img/slapper-arm.png" /></div>
+
+		<button onclick="document.getElementById('hand-image').src='img/slapper-arm.png';">normal</button>
+		<button onclick="document.getElementById('hand-image').src='img/slapper-arm2.png';">pink</button>
+		<button onclick="document.getElementById('hand-image').src='img/slapper-arm3.png';">green</button>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="mousestuff.js"></script>
