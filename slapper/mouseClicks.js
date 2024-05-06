@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var handImage = document.getElementById('hand-image');
   var cookieImage = document.getElementById('cookie-img');
 
@@ -16,12 +16,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to handle click event for the cookie image
   function handleClick() {
+    function playSound(src) {
+      var audio = new Audio();
+      audio.src = src;
+      audio.play();
+    }
     // Remove the pulse-animation class (if it's already applied)
     cookieImage.classList.remove('pulse-animation');
 
     // Add the pulse-animation class to restart the animation
     cookieImage.offsetWidth; // Trigger reflow to restart the animation
     cookieImage.classList.add('pulse-animation');
+    playSound("audio/slapp.mp3");
   }
 
   // Add mousedown event listener to the body
@@ -34,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   cookieImage.addEventListener('click', handleClick);
 
   // Add animationend event listener for the 'pulse' animation
-  cookieImage.addEventListener('animationend', function(event) {
+  cookieImage.addEventListener('animationend', function (event) {
     // Check if the animation that ended is 'pulse'
     if (event.animationName === 'pulse') {
       // Remove the pulse-animation class when the 'pulse' animation ends
