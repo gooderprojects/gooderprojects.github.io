@@ -12,8 +12,8 @@
 	<h1 class="prevent-select">Cookie slapper</h1>
 	<h1 id="counter" class="prevent-select">LOADING...</h1>
 	<h3 id="cps" class="prevent-select"> cookies per second</h3>
-	<button id="cookie-button" class="prevent-select" onclick="clickCookie()"><img id="cookie-img"
-			style="width: 350px; height: 350px;" src="img/cookie.png"></button>
+	<button style="tabindex: -1;" id="cookie-button" class="prevent-select" onclick="clickCookie()"><img id="cookie-img"
+			class="prevent-select" style="width: 350px; height: 350px;" src="img/cookie.png"></button>
 
 	<div id="shop-div">
 		<h2> - Shop - </h2>
@@ -30,12 +30,15 @@
 
 	</br>
 	</br>
-	<button onclick="resetData();">reset data</button>
 	<div id="follow"><img id="hand-image" src="img/slapper-arm.png" /></div>
 
-	<button onclick="document.getElementById('hand-image').src='img/slapper-arm.png';">normal</button>
+	<h3>Hand customization:</h3>
+	<button onclick="document.getElementById('hand-image').src='img/slapper-arm.png';">default</button>
 	<button onclick="document.getElementById('hand-image').src='img/slapper-arm2.png';">pink</button>
 	<button onclick="document.getElementById('hand-image').src='img/slapper-arm3.png';">green</button>
+	<button onclick="document.getElementById('hand-image').src='img/slapper-arm4.png';">blue</button>
+	<br><br><br><br>
+	<div style="float: right;"><button style="text-align: right;" onclick="resetData();">reset data</button></div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="mouseClicks.js"></script>

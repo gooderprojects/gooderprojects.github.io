@@ -1,33 +1,36 @@
 body {
-	background-color: white;
-	cursor: none;
-	max-width: 100%;
-	overflow-x: hidden;
-	max-height: 100%;
-	overflow-y: hidden;
+  background-color: white;
+  cursor: none;
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 100%;
+  overflow-y: hidden;
 }
 
 html {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
 }
 
 #shop-div {
-	width: 500px;
-	top: -100px;
-	float: right;
-	text-align: center;
-	height: 100%;
-	clear: both;
-	right: 0;
-	position: relative;
-	background-color: gray;
-	cursor: none;
+  width: 500px;
+  top: -100px;
+  float: right;
+  text-align: center;
+  height: 100%;
+  clear: both;
+  right: 0;
+  position: relative;
+  background-color: gray;
+  cursor: none;
 }
 
 .shop-button {
-	padding: 10px;
+  padding: 10px;
 }
 
 #follow {
@@ -37,9 +40,11 @@ html {
 }
 
 #hand-image {
-  width: 300%;
+  width: 175%;
   cursor: none;
+  position: fixed;
   transition: transform 0.04s ease;
+  z-index: 50;
 }
 
 #cookie-img {
@@ -57,6 +62,10 @@ html {
   transition: transform 0.5s;
 }
 
+#cookie-button:focus {
+  outline: none;
+}
+
 #cookie-button:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
@@ -67,24 +76,59 @@ html {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
 .pulse-animation {
-  animation: pulse 0.3s forwards; /* Make the animation play once and stay at the end */
+  animation: pulse 0.3s forwards;
+  /* Make the animation play once and stay at the end */
 }
 
 .shrink {
-  transform: scale(0.9); /* Scale the image down to 80% */
+  transform: scale(0.9);
+  /* Scale the image down to 80% */
 }
 
 .prevent-select {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Define animation for the gif */
+@keyframes play {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply animation to the gif */
+.gif {
+  animation: play;
+  animation-duration: 1s;
+  /* adjust as needed */
+}
+
+.selector {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
 }

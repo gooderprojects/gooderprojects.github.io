@@ -27,7 +27,35 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add the pulse-animation class to restart the animation
     cookieImage.offsetWidth; // Trigger reflow to restart the animation
     cookieImage.classList.add('pulse-animation');
+
+    // Do stuff when it gets clicked on ------------------------------------------------
     playSound("audio/slapp.mp3");
+    // Create img element
+    var gif = document.createElement("img");
+
+    // Set source to your gif
+    gif.src = "img/cookieExplosion.gif";
+
+    // Set the position
+    gif.style.position = "absolute";
+    gif.style.left = event.clientX + "px";
+    gif.style.top = event.clientY + 50 + "px";
+    gif.style.width = "250px";
+
+    // Add class for animation
+    gif.classList.add("gif");
+    gif.classList.add("selector")
+
+    // Append the img element to the body
+    document.body.appendChild(gif);
+
+    // Calculate duration of the gif's animation
+    var animationDuration = parseFloat(window.getComputedStyle(gif).animationDuration) * 1000;
+
+    // Remove the gif after the animation completes
+    setTimeout(function () {
+      document.body.removeChild(gif);
+    }, animationDuration);
   }
 
   // Add mousedown event listener to the body
