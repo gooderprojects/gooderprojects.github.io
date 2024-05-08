@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Set the position
     gif.style.position = "absolute";
-    gif.style.left = event.clientX + "px";
-    gif.style.top = event.clientY + 50 + "px";
+    gif.style.left = event.clientX + (Math.floor(Math.random() * 101) - 50) + "px";
+    gif.style.top = event.clientY + 50 + (Math.floor(Math.random() * 101) - 50) + "px";
     gif.style.width = "250px";
 
     // Add class for animation
