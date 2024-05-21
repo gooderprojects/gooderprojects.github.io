@@ -74,9 +74,12 @@ var myfunc = setInterval(function() {
   document.getElementById("current-date").innerHTML = new Date();
 
   // Runs all timers
-  var countDownDate_end = new Date("May 24, 2024 12:00:01").getTime();
-  endTimer(countDownDate_end, current_time);
   
+  // for wick
+  var countDownDate_end = new Date("May 23, 2024 11:45:01").getTime();
+  endTimer(countDownDate_end, current_time);
+
+  // For st x
   var countDownDate_x = new Date("May 30, 2024 12:00:01").getTime();
   xTimer(countDownDate_x, current_time);
 
