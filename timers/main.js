@@ -33,7 +33,7 @@ function endTimer(countDownDate, now) {
   if (timeleft_end < 0) {
     clearInterval(myfunc);
     console.log("End");
-    window.open("maintenance.html", '_self');
+    window.open("/maintenance.html", '_self');
   }
 }
 
