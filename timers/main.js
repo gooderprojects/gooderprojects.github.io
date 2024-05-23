@@ -41,7 +41,7 @@ function endTimer(countDownDate, now) {
  * [IMPORTANT]
  * When the main timer (main) runs out, quickly switch it to the x timer
  * Delete the xTimer function from this code and delete the timer from the html
- */
+ *
 
 function xTimer(countDownDate, now) {
   var timeleft_x = countDownDate - now;
@@ -64,6 +64,7 @@ function xTimer(countDownDate, now) {
     window.open("maintenance.html", '_self');
   }
 }
+*/
 
 var delayVar = 0;
 
@@ -76,12 +77,13 @@ var myfunc = setInterval(function() {
   // Runs all timers
   
   // for wick
-  var countDownDate_end = new Date("May 23, 2024 11:45:01").getTime();
+  var countDownDate_end = new Date("May 30, 2024 15:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
-  // For st x
+  /*For st x
   var countDownDate_x = new Date("May 30, 2024 12:00:01").getTime();
   xTimer(countDownDate_x, current_time);
+  */
 
   // No delay on open
   if (delayVar == 0) {
