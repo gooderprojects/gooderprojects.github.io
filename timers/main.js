@@ -24,11 +24,11 @@ function endTimer(countDownDate, now) {
   // Updates site title
   document.getElementById("titleid").innerHTML = days.toString()+" days left...";
 
-  if (days <= 7) {
+  /*if (days <= 7) {
     document.getElementById("end-span").style.color = "red";
     document.getElementById("end-subtitle").style.color = "red";
     document.getElementById("timer-title").style.color = "red";
-  }
+  }*/
 
   if (timeleft_end < 0) {
     clearInterval(myfunc);
