@@ -45,7 +45,7 @@ function endTimer(countDownDate, now) {
 
 function xTimer(countDownDate, now) {
   var timeleft_x = countDownDate - now;
-
+ 
   // Calculates time until countDownDate
   var days = Math.floor(timeleft_x / (1000 * 60 * 60 * 24));
   var hours = Math.floor((timeleft_x % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
