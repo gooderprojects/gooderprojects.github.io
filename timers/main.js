@@ -77,7 +77,7 @@ var myfunc = setInterval(function() {
   // Runs all timers
   
   // for wick
-  var countDownDate_end = new Date("Aug 14, 2024 8:20:01").getTime();
+  var countDownDate_end = new Date("May 26, 2025 12:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
   /*For st x
