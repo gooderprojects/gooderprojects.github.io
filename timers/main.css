@@ -31,21 +31,21 @@ a, #new-timers-span {
   font-size: 25px;
 }
 
-.x-div {
+.day-div {
   padding: 50px;
 }
 
-.x-timer {
+.day-timer {
   color: white;
   font-size: 100px;
   margin-top: -25px;
 }
 
-#x-timer-title {
+#day-timer-title {
   font-size: 20px;
 }
 
-#x-subtitle {
+#day-subtitle {
   margin-top: -75px;
   color: gray;
   font-size: 20px;
