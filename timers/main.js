@@ -80,6 +80,12 @@ var myfunc = setInterval(function() {
   var countDownDate_end = new Date("May 26, 2025 12:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
+  // Countdown for 3:00 PM today
+  var today = new Date();
+  today.setHours(15, 0, 0, 0);  // Set time to 3:00 PM
+  var countDownDate_today = today.getTime();
+  endTimer(countDownDate_today, current_time);
+
   /*For st x
   var countDownDate_x = new Date("May 30, 2024 12:00:01").getTime();
   xTimer(countDownDate_x, current_time);
