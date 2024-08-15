@@ -53,16 +53,9 @@ function xTimer(countDownDate, now) {
   var seconds = Math.floor((timeleft_x % (1000 * 60)) / 1000);
 
   // Sets time on timer
-  document.getElementById("day-days").innerHTML = days;
   document.getElementById("day-hours").innerHTML = hours;
   document.getElementById("day-minutes").innerHTML = minutes;
   document.getElementById("day-seconds").innerHTML = seconds;
-
-  if (timeleft_x < 0) {
-    clearInterval(myfunc);
-    console.log("End");
-    window.open("maintenance.html", '_self');
-  }
 }
 
 
