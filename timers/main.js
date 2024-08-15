@@ -42,7 +42,7 @@ function endTimer(countDownDate, now) {
  * When the main timer (main) runs out, quickly switch it to the x timer
  * Delete the xTimer function from this code and delete the timer from the html
  *
-
+*/
 function xTimer(countDownDate, now) {
   var timeleft_x = countDownDate - now;
  
@@ -53,10 +53,10 @@ function xTimer(countDownDate, now) {
   var seconds = Math.floor((timeleft_x % (1000 * 60)) / 1000);
 
   // Sets time on timer
-  document.getElementById("x-days").innerHTML = days;
-  document.getElementById("x-hours").innerHTML = hours;
-  document.getElementById("x-minutes").innerHTML = minutes;
-  document.getElementById("x-seconds").innerHTML = seconds;
+  document.getElementById("day-days").innerHTML = days;
+  document.getElementById("day-hours").innerHTML = hours;
+  document.getElementById("day-minutes").innerHTML = minutes;
+  document.getElementById("day-seconds").innerHTML = seconds;
 
   if (timeleft_x < 0) {
     clearInterval(myfunc);
@@ -64,7 +64,7 @@ function xTimer(countDownDate, now) {
     window.open("maintenance.html", '_self');
   }
 }
-*/
+
 
 var delayVar = 0;
 
@@ -79,6 +79,12 @@ var myfunc = setInterval(function() {
   // for wick
   var countDownDate_end = new Date("May 26, 2025 12:00:01").getTime();
   endTimer(countDownDate_end, current_time);
+
+  // Countdown for 3:00 PM today
+  var today = new Date();
+  today.setHours(14, 55, 1, 0);  // Set time to 3:00 PM
+  var countDownDate_today = today.getTime();
+  xTimer(countDownDate_today, current_time);
 
   /*For st x
   var countDownDate_x = new Date("May 30, 2024 12:00:01").getTime();
