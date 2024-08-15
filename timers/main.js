@@ -82,7 +82,7 @@ var myfunc = setInterval(function() {
 
   // Countdown for 3:00 PM today
   var today = new Date();
-  today.setHours(14, 55, 0, 0);  // Set time to 3:00 PM
+  today.setHours(14, 55, 1, 0);  // Set time to 3:00 PM
   var countDownDate_today = today.getTime();
   xTimer(countDownDate_today, current_time);
 
