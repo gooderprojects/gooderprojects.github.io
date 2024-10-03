@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measure Your Weight</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            user-select: none;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        #counter-container {
+            position: relative;
+            margin-top: 100px;
+            font-size: 15em;
+            text-align: center;
+            display: inline-flex;
+            align-items: baseline; /* Align the number and unit properly */
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #counter {
+            font-size: 1em; /* Base size for the number */
+            display: inline-block;
+            margin-left: 90px;
+        }
+
+        .unit {
+            font-size: 0.25em; /* Make the 'lbs' text smaller */
+            margin-left: 10px; /* Add some spacing between the number and 'lbs' */
+            align-self: flex-end; /* Align the 'lbs' to the bottom of the number */
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+
+    <h1>Scale.com</h1>
+    <p>To get an accurate weight, please place your laptop on the floor and stand on the screen.</p>
+    <div id="counter-container">
+        <span id="counter">0.00</span><span class="unit">lbs</span>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button onClick="window.open('https://buymeacoffee.com/scaledotcom', '_blank');">Buy me a coffee &#9749;</button>
+    <button onClick="window.open('https://patreon.com/Scaledotcom', '_blank');" style="background-color: #ff5465">Sub to me on Patreon &#128153;</button>
+
+    <script>
+        let currentValue = 0;
+        let animationFrame;
+
+        // Function to create the count up effect
+        function countup(start, end, duration) {
+            const counterElement = document.getElementById('counter');
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                const value = start + (end - start) * easeOutQuad(progress);
+
+                counterElement.textContent = value.toFixed(2); // Display the number with 2 decimal places
+                currentValue = value;
+
+                if (progress < 1) {
+                    animationFrame = requestAnimationFrame(updateCounter);
+                }
+            }
+
+            // Easing function for a more interesting effect
+            function easeOutQuad(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
+
+            cancelAnimationFrame(animationFrame);
+            requestAnimationFrame(updateCounter);
+        }
+
+        // Function to create the count down effect
+        function countdown(start, end, duration) {
+            const counterElement = document.getElementById('counter');
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                const value = start + (end - start) * easeOutQuad(progress);
+
+                counterElement.textContent = value.toFixed(2); // Display the number with 2 decimal places
+                currentValue = value;
+
+                if (progress < 1) {
+                    animationFrame = requestAnimationFrame(updateCounter);
+                }
+            }
+
+            // Easing function for a more interesting effect
+            function easeOutQuad(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
+
+            cancelAnimationFrame(animationFrame);
+            requestAnimationFrame(updateCounter);
+        }
+
+        // Initial countdown from 100 to 0
+        countdown(100, 0, 2000);
+
+        // Mouse down and mouse up event listeners
+        $("html").on("mousedown touchstart", function () {
+            // Generate a random weight between 50 and 300
+            const randomWeight = Math.random() * (400 - 0) + 0;
+            countup(currentValue, randomWeight, 1500);
+        }).on("mouseup touchend", function () {
+            countdown(currentValue, 0, 1500);
+        });
+    </script>
+
+</body>
+
+</html>
