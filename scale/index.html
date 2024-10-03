@@ -53,28 +53,89 @@
             margin-left: 10px; /* Add some spacing between the number and 'lbs' */
             align-self: flex-end; /* Align the 'lbs' to the bottom of the number */
         }
+
+        #welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #00ba06; /* Darker green */
+            display: flex;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #scale-content {
+            display: none;
+        }
+
+        #message {
+            position: fixed;
+            bottom: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            font-size: 1em; /* Smaller font size */
+            border-radius: 5px;
+            display: none;
+            z-index: 15;
+        }
     </style>
 </head>
 
 <body oncontextmenu="return false;">
 
-    <h1>Scale.com</h1>
-    <p>To get an accurate weight, please place your laptop on the floor and stand on the screen.</p>
-    <div id="counter-container">
-        <span id="counter">0.00</span><span class="unit">lbs</span>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <h1 style="color: white;">Scale.com</h1>
+        <p>To get an accurate weight, please place your laptop on the floor and stand on the screen.</p>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <button onClick="window.open('https://buymeacoffee.com/scaledotcom', '_blank');">Buy me a coffee &#9749;</button>
-    <button onClick="window.open('https://patreon.com/Scaledotcom', '_blank');" style="background-color: #ff5465">Sub to me on Patreon &#128153;</button>
+
+    <!-- Main Scale Content -->
+    <div id="scale-content">
+        <h1>Scale.com</h1>
+        <p>To get an accurate weight, please place your laptop on the floor and stand on the screen.</p>
+        <div id="counter-container">
+            <span id="counter">0.00</span><span class="unit">lbs</span>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button onClick="window.open('https://buymeacoffee.com/scaledotcom', '_blank');">Buy me a coffee &#9749;</button>
+        <button onClick="window.open('https://patreon.com/Scaledotcom', '_blank');" style="background-color: #ff5465">Sub to me on Patreon &#128153;</button>
+    </div>
+
+    <div id="message">Please remain on the scale until your weight is fully measured.</div>
 
     <script>
         let currentValue = 0;
         let animationFrame;
+        let initialCountdownCompleted = false;
+        let isCountingUp = false;
+
+        $(document).ready(function () {
+            // Display the welcome screen for 3 seconds, then fade out and show the scale content
+            setTimeout(function () {
+                $("#welcome-screen").fadeOut(1000, function () {
+                    $("#scale-content").fadeIn(1000);
+                    // Initial countdown from 100 to 0
+                    countdown(100, 0, 2000, function () {
+                        initialCountdownCompleted = true; // Allow interaction after initial countdown completes
+                    });
+                });
+            }, 3000);
+        });
 
         // Function to create the count up effect
         function countup(start, end, duration) {
             const counterElement = document.getElementById('counter');
             const startTime = performance.now();
+            isCountingUp = true;
+            $("#message").hide(); // Hide message when starting to count up
 
             function updateCounter(currentTime) {
                 const elapsedTime = currentTime - startTime;
@@ -86,6 +147,8 @@
 
                 if (progress < 1) {
                     animationFrame = requestAnimationFrame(updateCounter);
+                } else {
+                    isCountingUp = false; // Counting up is done
                 }
             }
 
@@ -99,7 +162,7 @@
         }
 
         // Function to create the count down effect
-        function countdown(start, end, duration) {
+        function countdown(start, end, duration, callback) {
             const counterElement = document.getElementById('counter');
             const startTime = performance.now();
 
@@ -113,6 +176,8 @@
 
                 if (progress < 1) {
                     animationFrame = requestAnimationFrame(updateCounter);
+                } else if (callback) {
+                    callback(); // Call the callback function once the countdown is complete
                 }
             }
 
@@ -125,16 +190,20 @@
             requestAnimationFrame(updateCounter);
         }
 
-        // Initial countdown from 100 to 0
-        countdown(100, 0, 2000);
-
         // Mouse down and mouse up event listeners
         $("html").on("mousedown touchstart", function () {
-            // Generate a random weight between 50 and 300
-            const randomWeight = Math.random() * (400 - 0) + 0;
-            countup(currentValue, randomWeight, 1500);
+            if (initialCountdownCompleted) {
+                // Generate a random weight between 50 and 300
+                const randomWeight = Math.random() * (400 - 0) + 0;
+                countup(currentValue, randomWeight, 1500);
+            }
         }).on("mouseup touchend", function () {
-            countdown(currentValue, 0, 1500);
+            if (initialCountdownCompleted) {
+                if (isCountingUp) {
+                    $("#message").stop(true, true).fadeIn(500).delay(2000).fadeOut(500); // Show the message, stop any ongoing animations
+                }
+                countdown(currentValue, 0, 1500);
+            }
         });
     </script>
 
