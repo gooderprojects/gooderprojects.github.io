@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>real Metal gear solid no virus</title>
+    </head>
+
+    <body>
+        <h1>Welcome to totally real authentic metal gear solid that's not virus</h1>
+        <h3>Try to get to 100% solidity</h3>
+        <br>
+        <h2 id="solid">metal solididty: 0%</h2>
+        <h2 id="gee">gears: 0</h2>
+        <br>
+        <button onclick="getGears();">click to get metal gears</button>
+        <button onclick="addSolid();">spend metal gears for metal solidity (cost: 10 metal gears)</button>
+        <h1 id="winmessage" style="color: lime; visibility:hidden;">You win good job!</h1>
+
+        <script>
+            var gears = 0;
+            var solidity = 0;
+            var gears1 = 1 + solidity;
+
+            function getGears() {
+                gears += gears1;
+                document.getElementById("gee").innerHTML = "gears: " + gears;
+            };
+            function addSolid() {
+                if (gears >= 10) {
+                    gears -= 10;
+                    solidity += 1;
+                    document.getElementById("solid").innerHTML = "metal solidity: " + solidity + "%";
+                    document.getElementById("gee").innerHTML = "gears: " + gears;
+                    gears1 = 1 + solidity;
+                    checkforwin();
+                };
+            };
+            function checkforwin() {
+                if (solidity >= 100) {
+                    document.getElementById("winmessage").style.visibility = "visible";
+                    alert("Congradulations, you win! good job for that");
+                };
+            };
+        </script>
+    </body>
+</html>
