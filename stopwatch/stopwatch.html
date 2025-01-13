@@ -22,11 +22,15 @@
     </style>
 </head>
 <body>
-    <h1>Timer</h1>
+    <h1>Try to stop the timer on 1 second</h1>
+    <h4>'space' to pause/unpause, 'r' to reset</h4>
     <div class="timer" id="timer">00:00.00</div>
     <button onclick="startTimer()">Start</button>
     <button onclick="pauseTimer()">Pause</button>
     <button onclick="resetTimer()">Reset</button>
+    <br>
+    <br>
+    <button onclick="window.open('easy_mode.html', '_self');">Easy mode</button>
 
     <script>
         let timerInterval;
