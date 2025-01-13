@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .timer {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timer</h1>
+    <div class="timer" id="timer">00:00.00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <script>
+        let timerInterval;
+        let totalMilliseconds = 0;
+        let stopAtOneSecond = false;
+        let timerIsRunning = false;
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(totalMilliseconds / 60000).toString().padStart(2, '0');
+            const seconds = Math.floor((totalMilliseconds % 60000) / 1000).toString().padStart(2, '0');
+            const milliseconds = Math.floor((totalMilliseconds % 1000) / 10).toString().padStart(2, '0');
+            document.getElementById('timer').textContent = `${minutes}:${seconds}.${milliseconds}`;
+        }
+
+        function startTimer() {
+            if (!timerInterval) {
+                timerIsRunning = true;
+                timerInterval = setInterval(() => {
+                    totalMilliseconds += 10;
+                    updateTimerDisplay();
+                }, 10);
+            }
+        }
+
+        function pauseTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timerIsRunning = false;
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            totalMilliseconds = 0;
+            stopAtOneSecond = false;
+            updateTimerDisplay();
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.code === 'Space') {
+                if (stopAtOneSecond && timerIsRunning) {
+                    if (true) {
+                        totalMilliseconds = 1000;
+                        pauseTimer();
+                        updateTimerDisplay();
+                        stopAtOneSecond = false;
+                    } else {
+                        pauseTimer();
+                    }
+                } else {
+                    if (timerIsRunning) {
+                        pauseTimer();
+                    } else {
+                        startTimer();
+                    }
+                }
+                event.preventDefault(); // Prevent scrolling when Space is pressed
+            } else if (event.key === 's' || event.key === 'S') {
+                stopAtOneSecond = !stopAtOneSecond;
+                console.log(`stopAtOneSecond is now ${stopAtOneSecond}`);
+            } else if (event.key === 'r' || event.key === 'R') {
+                resetTimer();
+            }
+        });
+    </script>
+</body>
+</html>

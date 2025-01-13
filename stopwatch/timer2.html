@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try to stop the timer at 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .timer {
+            font-size: 100px;
+            font-weight: bold;
+        }
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .message {
+            font-size: 24px;
+            padding: 10px;
+            visibility: hidden;
+        }
+        .message.green {
+            color: green;
+        }
+        .message.red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Try to stop the number at 5</h1>
+    <h3>Press 'space' to start/stop/restart</h3>
+    <div class="timer" id="timer">0</div>
+    <div class="message" id="message"></div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <script>
+        let timerInterval;
+        let totalSeconds = 0;
+        let stopAtFive = false;
+        let timerIsRunning = false;
+
+        function updateTimerDisplay() {
+            const timerElement = document.getElementById('timer');
+            timerElement.textContent = totalSeconds;
+        }
+
+        function startTimer() {
+            resetTimer();
+            document.getElementById('timer').classList.remove('green', 'red');
+            const messageElement = document.getElementById('message');
+            messageElement.style.visibility = 'hidden';
+            messageElement.classList.remove('green', 'red');
+
+            if (totalSeconds < 1) {
+                totalSeconds = 1;
+                updateTimerDisplay();
+            }
+
+            if (!timerInterval) {
+                timerIsRunning = true;
+                timerInterval = setInterval(() => {
+                    totalSeconds++;
+                    updateTimerDisplay();
+                }, 1000);
+            }
+        }
+
+        function pauseTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timerIsRunning = false;
+
+            const timerElement = document.getElementById('timer');
+            const messageElement = document.getElementById('message');
+
+            if (!stopAtFive && totalSeconds === 5) {
+                totalSeconds = 6;
+                updateTimerDisplay();
+                timerElement.classList.add('red');
+                messageElement.textContent = 'You failed!';
+                messageElement.classList.add('red');
+                messageElement.style.visibility = 'visible';
+            } else if (totalSeconds === 5) {
+                timerElement.classList.add('green');
+                messageElement.textContent = 'Good job!';
+                messageElement.classList.add('green');
+                messageElement.style.visibility = 'visible';
+                stopAtFive = false;
+            } else {
+                timerElement.classList.add('red');
+                messageElement.textContent = 'You failed!';
+                messageElement.classList.add('red');
+                messageElement.style.visibility = 'visible';
+            }
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            totalSeconds = 0;
+            document.getElementById('timer').classList.remove('green', 'red');
+            const messageElement = document.getElementById('message');
+            messageElement.style.visibility = 'hidden';
+            messageElement.classList.remove('green', 'red');
+            updateTimerDisplay();
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.code === 'Space') {
+                if (timerIsRunning) {
+                    pauseTimer();
+                } else {
+                    startTimer();
+                }
+                event.preventDefault(); // Prevent scrolling when Space is pressed
+            } else if (event.key === 's' || event.key === 'S') {
+                stopAtFive = !stopAtFive;
+                updateTimerDisplay();
+            } else if (event.key === 'r' || event.key === 'R') {
+                resetTimer();
+            }
+        });
+    </script>
+</body>
+</html>
