@@ -1,5 +1,3 @@
-console.log("i can smell you");
-
 /**
  * This code was written my me (github.com/Zbomb2000)
  * I don't really care what you do with it
@@ -70,7 +68,7 @@ var myfunc = setInterval(function() {
   // Runs all timers
   
   // for wick
-  var countDownDate_end = new Date("May 26, 2025 12:00:01").getTime();
+  var countDownDate_end = new Date("May 22, 2025 12:00:01").getTime();
   endTimer(countDownDate_end, current_time);
 
   // Countdown for 3:00 PM today
